@@ -22,41 +22,7 @@
 <body background="resources/image/hd3.jpg">
 <Div class="continer">
  
-<Div class="continer">
- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Sachin Cake..</a>
-    </div>
-    <ul  class="nav navbar-nav">
-      <li class="active"><a href="index.jsp">Home</a></li>
-      <li><a href="Contact_us.jsp">Contact US</a></li>
-      <li><a href="About_US.jsp">About Us</a></li>
-      <li>
-           <ul  class="nav navbar-nav">
-      <li class="active"><a href="index.jsp">Home</a></li>
-      <li><a href="Contact_us.jsp">Contact US</a></li>
-      <li><a href="About_US.jsp">About Us</a></li>
-      <li>
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-       Category <span class="caret"></span></a>
-       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">1</a> </li>
-        <li><a href="#">2</a> </li>
-        <li><a href="#">3</a> </li>
-        <li><a href="#">4</a> </li>
-        </ul>
-      </li>
-      </li>
-      <li><a href="Register.jsp">Register</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-    <li> <a href="#"> <span class="glyphicon glyphicon-search"> </span> search</a> </li>
-    <li> <a href="#" > <span class="glyphicon glyphicon-log-in"> </span> log in</a> </li>
-    </ul>
-  </div>
-</nav>
-</Div>
+<%@include file="/H_F/Header.jsp" %>
 
 
 <h1 Style="color:red " align="center" >About Us</h1>
