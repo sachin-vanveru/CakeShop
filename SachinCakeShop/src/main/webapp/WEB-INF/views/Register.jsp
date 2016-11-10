@@ -16,7 +16,7 @@
 </head>
 <body background="resources/image/hd3.jpg">
 <div class="container-fluid">
-<%@include file="/H_F/Header.jsp" %>
+<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
 <div style="width:460px; height: 400px" class="container" >
 <center>

@@ -20,7 +20,7 @@
 <body style="height:150px;" background="resources/image/hd3.jpg">
 <div class="Continer-fluid">
 
-<%@include file="/H_F/Header.jsp" %>
+<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
 <div style="height:300px" Class="container-fluid">
  <div id="myCarousel" class="carousel slide" data-ride="carousel">

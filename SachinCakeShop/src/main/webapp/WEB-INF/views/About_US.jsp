@@ -22,7 +22,7 @@
 <body background="resources/image/hd3.jpg">
 <Div class="continer">
  
-<%@include file="/H_F/Header.jsp" %>
+<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
 
 <h1 Style="color:red " align="center" >About Us</h1>
