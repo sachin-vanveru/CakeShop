@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head><title></title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,7 +19,8 @@
   }
   </style>
 </head>
-<body style="height:150px;" background="resources/image/hd3.jpg">
+
+<body style="height:150px;" background="/resources/image/hd3.jpg">
 <div class="Continer-fluid">
 
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
@@ -36,16 +39,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/image/welcome-cake.jpg" alt="anniversary" width="460" height="345">
+        <img src="<c:url value='/resources/image/ann.jpg' />" alt="anniversary" width="460" height="345">
       </div>
      
 
       <div class="item">
-        <img src="resources/image/birthday.jpg" alt="Birthday" width="460" height="345">
+        <img src="/resources/image/birthday.jpg" alt="Birthday" width="460" height="345">
       </div>
     
       <div class="item">
-        <img src="resources\image\ann4.jpg" alt="anniversary" width="460" height="345">
+        <img src="/resources/image/ann4.jpg" alt="anniversary" width="460" height="345">
       </div>
 
       <div class="item">

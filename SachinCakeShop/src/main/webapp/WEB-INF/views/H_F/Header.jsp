@@ -15,7 +15,7 @@
       <a class="navbar-brand" href="#">Sachin Cake..</a>
     </div>
     <ul  class="nav navbar-nav">
-      <li class="active"><a href="SachinCakeShop">Home</a></li>
+      <li class="active"><a href="/SachinCakeShop">Home</a></li>
       <li><a href="contact_us">Contact US</a></li>
       <li><a href="About_us">About Us</a></li>
       <li>
