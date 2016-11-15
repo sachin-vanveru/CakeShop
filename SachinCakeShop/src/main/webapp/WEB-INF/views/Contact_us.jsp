@@ -16,9 +16,9 @@ h4   {color: white;}
 </style>
 </head>
 
-<body background="resources/image/hd3.jpg">
+<body style="background-color: #ffdd99">
 
-<div class="container-fluid">
+<div class="container">
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 <table  class="table table-condensed">
 <tr>

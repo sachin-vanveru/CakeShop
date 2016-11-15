@@ -15,8 +15,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body background="resources/image/hd3.jpg">
-<div class="container-fluid">
+<body style="background-color: #ffdd99">
+<div class="container">
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
 <div style="width:460px; height: 400px" class="container" >
@@ -55,6 +55,7 @@
 </tfoot>
 </table>
 </center>
+</div>
 </div>
 </body>
 </html>

@@ -19,20 +19,19 @@
  }
 </style>
 </head>
-<body background="resources/image/hd3.jpg">
+<body style="background-color: #ffdd99" >
 <Div class="continer">
  
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
+<h1 Style="color:graytext; " align="center" >About Us</h1>
 
-<h1 Style="color:red " align="center" >About Us</h1>
-
-<p>
+<p style="color:black">
 CakeBee is a premium cake shop in Coimbatore and Trichy. We opened in 2012, 
-when Trichy was grappling with a lack of choice for quality cakes. </p><p>
+when Trichy was grappling with a lack of choice for quality cakes. </p><pstyle="color:black">
 After months of meticulous baking, CakeBee headed every must visit list of cafes in Trichy. The Hindu called CakeBee as the “Hip new cafe on a roll”. 
 <br>CakeBee currently serves happiness from two swanky cafes in prime locales of Trichy.
-During a visit to Coimbatore in 2015, we faced a lot of challenges to order a premium cake online.</p><p> 
+During a visit to Coimbatore in 2015, we faced a lot of challenges to order a premium cake online.</p><p style="color:black"> 
 Problems like non-functional website, lack of response and long delivery wait times. That's when we
  decided to go online and solve this predicament to the best of our abilities. </p>
  <br><br>

@@ -21,7 +21,7 @@
   </style>
 </head>
 
-<body  background="/resources/image/hd3.jpg">
+<body style="background-color: #ffdd99">
 <div class="container">
 
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
@@ -67,9 +67,12 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
-<div>
+  <br>
+  <div class="row">
+<div class="col-sm-2"> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake.jpg' />"> </div> &nbsp;
+<div class="col-sm-3"> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake1.jpg' />"> </div>   
   </div>
-</div> 
+</div>
+  
 </body>
 </html>
