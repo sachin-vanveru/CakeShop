@@ -27,4 +27,9 @@ public class HomeController {
 	{
 		return "Register";
 	}
+	@RequestMapping(value="/view_All")
+	public String View_All()
+	{
+		return "View_All";
+	}
 }

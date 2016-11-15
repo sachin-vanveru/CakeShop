@@ -13,20 +13,21 @@
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 70%;
+      width: 80%;
       margin: auto;
-      height:300px;
+     height: 400px;
+      
   }
   </style>
 </head>
 
-<body style="height:150px;" background="/resources/image/hd3.jpg">
-<div class="Continer-fluid">
+<body  background="/resources/image/hd3.jpg">
+<div class="container">
 
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
-<div style="height:300px" Class="container-fluid">
- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div  class="container">
+ <div style="height:400px" id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -37,22 +38,22 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div  class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="<c:url value='/resources/image/ann.jpg' />" alt="anniversary" width="460" height="345">
+        <img style="height: 400px;" src="<c:url value='/resources/image/ann.jpg' />" alt="anniversary" />
       </div>
      
 
       <div class="item">
-        <img src="/resources/image/birthday.jpg" alt="Birthday" width="460" height="345">
+        <img style="height: 400px;" src="<c:url value='/resources/image/birthday.jpg' />" alt="Birthday" />
       </div>
     
       <div class="item">
-        <img src="/resources/image/ann4.jpg" alt="anniversary" width="460" height="345">
+        <img style="height: 400px;" src="<c:url value='/resources/image/ann2.jpg' />" alt="anniversary" />
       </div>
 
       <div class="item">
-        <img src="resources\image\hd3.jpg" alt="Flower" width="460" height="345">
+       <img style="height: 400px;" src="<c:url value='/resources/image/ann3.jpg' />" alt="anniversary" />
       </div>
     </div>
 

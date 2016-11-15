@@ -8,7 +8,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<Div class="continer">
+<Div class="container">
  <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -18,16 +18,8 @@
       <li class="active"><a href="/SachinCakeShop">Home</a></li>
       <li><a href="contact_us">Contact US</a></li>
       <li><a href="About_us">About Us</a></li>
-      <li>
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-       Category <span class="caret"></span></a>
-       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">1</a> </li>
-        <li><a href="#">2</a> </li>
-        <li><a href="#">3</a> </li>
-        <li><a href="#">4</a> </li>
-        </ul>
-      </li>
+      <li><a href="view_All">View All</a></li>
+      
       <li><a href="Register">Register</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
