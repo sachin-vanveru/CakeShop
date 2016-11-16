@@ -1,5 +1,4 @@
-<HTML>
-<head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -7,13 +6,12 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
 <center>
 <a href="#">
 <img align="top" src="<c:url value='/resources/image/LogoBanner.jpg' />" class="img-rounded" alt="cake shop" width="600" height="160" />
 </a>
 </center>
+
 <Div class="container">
  <nav style="background-color:#ff0055;" class="navbar navbar-default">
   <div class="container-fluid">
@@ -61,7 +59,12 @@
         </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">submit</button>
+        <table class=table>
+        <tr>
+        <td> <a href="Register">Register now</a> </td>
+         <td> <button type="button" class="btn btn-default" data-dismiss="modal">submit</button></td>
+        </tr>
+        </table>
         </div>
       </div>
       

@@ -68,9 +68,12 @@
     </a>
   </div>
   <br>
-  <div class="row">
-<div class="col-sm-2"> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake.jpg' />"> </div> &nbsp;
-<div class="col-sm-3"> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake1.jpg' />"> </div>   
+  <table class="table"><tr><td> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake.jpg' />"> </td>
+  <td><img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake1.jpg' />"> </td>
+  <td> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/hd.jpg' />">  </td>
+  <td> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/hd1.jpg' />"> </td>
+  </tr>
+  </table>
   </div>
 </div>
   
