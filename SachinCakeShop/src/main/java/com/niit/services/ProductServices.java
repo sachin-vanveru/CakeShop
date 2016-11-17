@@ -8,5 +8,11 @@ public class ProductServices {
 	{
 		return productdao.getAllProduct();
 	}
-
+	ProductDaoImple prdlist=new ProductDaoImple();
+	public Product getById(int id) {
+		for(Product prd :prdlist)
+			if(prd.getPid()==id)
+				return prd;
+		return null;
+	}
 }

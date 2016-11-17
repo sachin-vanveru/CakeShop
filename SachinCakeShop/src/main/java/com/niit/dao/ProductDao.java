@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface ProductDao {
    public	List<Product>getAllProduct();
-
+   public Product getById(int id);
 }

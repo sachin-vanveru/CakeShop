@@ -32,4 +32,9 @@ public class HomeController {
 	{
 		return "View_All";
 	}
+	@RequestMapping(value="/disp")
+	public String displayProduct()
+	{
+		return "displayProduct";
+	}
 }

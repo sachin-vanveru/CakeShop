@@ -6,64 +6,47 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>CAKES</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="<c:url value='/resources/js/AngularProductController.js' />"></script>
 </head>
-<body style="background-color: #ffdd99">
-<div class="container">
+<body ng-app="myapp" style="background-color: #ffdd99">
+<div   class="container">
 
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
 <Div class="container">
-<table class="table" align="center">
-   <th> 
-   <td>  <input type="text" /><button class="default"><span class="glyphicon glyphicon-search"> </span></button> </td>
-   </th>
-   <tr> 
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/ann.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:260px" src="<c:url value='/resources/image/ann1.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/ann2.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/ann3.jpg' />" /></a> </td>
+ <input type="text" /><button class="default"><span class="glyphicon glyphicon-search"> </span></button> 
+<div ng-controller="myCtrl">
+
+<table width="100%"   class="table">
+
+<tr>
+   <td ng-repeat="product in data">
+   <table>
+   <tr>
+   <td>
+   <img src="<c:url value='/resources/image/{{product.i_name}}' />" alt="no images" width="100" height="100" /></td>
+  </tr>
+  <tr>
+   <td>Cake: {{product.pname}} </td>
+  </tr>
+  <tr>
+   <td>Rs.{{product.price}}</td>
    </tr>
-      <tr> 
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/ann4.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/birthday.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:250px" src="<c:url value='/resources/image/birthday1.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:260px" src="<c:url value='/resources/image/birthday2.jpg' />" /></a> </td>
-   </tr>
- <tr> 
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/hd.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/hd1.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/hd2.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:260px " src="<c:url value='/resources/image/hd3.jpg' />" /></a> </td>
-   </tr>
-   
-<tr> 
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake1.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake2.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:260px " src="<c:url value='/resources/image/cake3.jpg' />" /></a> </td>
-   </tr>
-<tr> 
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake4.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake5.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake6.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:260px " src="<c:url value='/resources/image/rainbow-cake.jpg' />" /></a> </td>
-   </tr>
-   <tr> 
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/Vanilla-Birthday-Cake.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake1.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px;width:260px" src="<c:url value='/resources/image/cake2.jpg' />" /></a> </td>
-      <td> <a href="#"><img style="height:200px; width:260px " src="<c:url value='/resources/image/cake3.jpg' />" /></a> </td>
+   <tr>
+   <td>
+   <a href="disp/id={{product.pid}}" class="btn btn-primary">View</a>
+   </td>
    </tr>
    
-</table>
+   </table>
+   &nbsp;
+   
+    </td>
+  </tr>
+ </table>
+</div>
  <a class="btn btn-block btn-social btn-twitter">
     <span class="fa fa-twitter"></span> Sign in with Twitter
   </a>
