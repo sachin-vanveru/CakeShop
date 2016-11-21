@@ -17,8 +17,10 @@ public class ProductDaoImple implements ProductDao {
 	{
 		return prdlist;
 	}
+	
 	@Override
 	public Product getById(int id) {
+		
 		for(Product prd :prdlist)
 			if(prd.getPid()==id)
 				return prd;

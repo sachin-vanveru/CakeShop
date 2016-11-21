@@ -36,7 +36,7 @@
    </tr>
    <tr>
    <td>
-   <a href="disp/id={{product.pid}}" class="btn btn-primary">View</a>
+   <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a>
    </td>
    </tr>
    
@@ -47,6 +47,7 @@
   </tr>
  </table>
 </div>
+
  <a class="btn btn-block btn-social btn-twitter">
     <span class="fa fa-twitter"></span> Sign in with Twitter
   </a>
