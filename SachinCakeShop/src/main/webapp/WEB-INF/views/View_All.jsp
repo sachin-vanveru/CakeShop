@@ -16,17 +16,21 @@
 <%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
 <Div class="container">
- <input type="text" /><button class="default"><span class="glyphicon glyphicon-search"> </span></button> 
+
+ <div  class="container">
+ <input  type="text" id="query" ng-model="query" /><button class="default"><span class="glyphicon glyphicon-search"> </span></button>
+ </div>
 <div ng-controller="myCtrl">
 
 <table width="100%"   class="table">
 
 <tr>
-   <td ng-repeat="product in data">
+   <td ng-repeat="product in data |filter:query" >
    <table>
    <tr>
    <td>
-   <img src="<c:url value='/resources/image/{{product.i_name}}' />" alt="no images" width="100" height="100" /></td>
+   <img src="<c:url value='/resources/image/{{product.i_name}}' />
+   " alt="no images" width="100" height="100" /></td>
   </tr>
   <tr>
    <td>Cake: {{product.pname}} </td>
