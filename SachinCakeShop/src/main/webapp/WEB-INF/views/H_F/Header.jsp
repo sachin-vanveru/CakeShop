@@ -12,7 +12,7 @@
 </a>
 </center>
 
-<Div class="container">
+<Div>
  <nav style="background-color:#ff0055;" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
