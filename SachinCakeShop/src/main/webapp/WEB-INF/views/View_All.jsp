@@ -22,7 +22,7 @@
  </div>
 <table style="width: 100%;" class="table">
 <tr>
-<th ng-click="sort('pid')">Product Id</th>
+<th ng-click="sort('pid')"><button class="btn btn-primary">Product Id</button> </th>
 <th ng-click="sort('i_name')">Product </th>
 <th ng-click="sort('pname')">Cake name </th>
 <th ng-click="sort('price')">price</th>

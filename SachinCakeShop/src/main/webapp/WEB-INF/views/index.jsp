@@ -68,12 +68,8 @@
     </a>
   </div>
   <br>
-  <table class="table"><tr><td> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake.jpg' />"> </td>
-  <td><img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/cake1.jpg' />"> </td>
-  <td> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/hd.jpg' />">  </td>
-  <td> <img style="height: 150px; width:150px;" alt="cake" src="<c:url value='/resources/image/hd1.jpg' />"> </td>
-  </tr>
-  </table>
+  </div>
+  <div style="width:100px" class="container"><iframe width="560" height="315" src="https://www.youtube.com/embed/eE-zAcJusWU" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
   
