@@ -8,14 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <spring:form class="form" action="/addCategory" modelAttribute="category" >
-      Enter ID:
-      <spring:input id="cid" path="cid" clss="form-control"/>
-      enter category name
-    <spring:input id="cname" path="cname" clss="form-control"/>
-    Enter description
-    <spring:input id="cdesc" path="cdesc" clss="form-control"/>
-    <spring:button type="button" value="addCategory">enter </spring:button>
+ <table>
+ <tr>
+    <td><spring:form class="form" action="/addCategory" modelAttribute="category" >
+      Enter ID:</td>
+      <td><spring:input id="cid" path="cid" clss="form-control"/></td></tr>
+     <tr> <td>enter category name</td>
+    <td><spring:input id="cname" path="cname" clss="form-control"/></td></Tr>
+    <tr><td>Enter description</td>
+    <td><spring:input id="cdesc" path="cdesc" clss="form-control"/></td></tr>
+   <tr><td><a href="#"><spring:button type="button" value="addCategory">enter </spring:button></a> </td></tr>
     </spring:form>
+    </table>
 </body>
 </html>

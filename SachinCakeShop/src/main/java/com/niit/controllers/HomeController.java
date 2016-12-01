@@ -41,6 +41,7 @@ public class HomeController {
 	{
 		return "View_All";
 	}
+	
 	 @RequestMapping (value="/product")
 		
 		public @ResponseBody List<Product> getAllData()
@@ -49,6 +50,13 @@ public class HomeController {
 			
 			return productList;
 		}
+	 
+	 @RequestMapping(value="/admin/addCategory")
+		public String addCategory()
+		{
+			return "admin/addCategory";
+		}
+
 	  
 	  @RequestMapping(value="/disp")
 	  public ModelAndView display(@RequestParam(name="id") String prdid){
