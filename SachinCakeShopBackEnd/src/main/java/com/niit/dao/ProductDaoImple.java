@@ -1,30 +1,25 @@
 package com.niit.dao;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.transaction.Transactional;
+import javax.servlet.http.HttpServletRequest;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
+
 import com.niit.models.*;
+@Repository
 public class ProductDaoImple implements ProductDao {
+	
 	public static List<Product> prdlist=new LinkedList<>();
-	public ProductDaoImple()
-	{
-		prdlist.add(new Product(101, "Sachin", 700, 10, "Choclate cake with vanila topping", "cake.jpg"));
-		prdlist.add(new Product(102, "sarayana", 750, 10, "anniversary cake with micky mouse designe", "ann3.jpg"));
-		prdlist.add(new Product(103, "sahal", 850, 10,"birthday cake with Strawberry" , "cake2.jpg"));
-		prdlist.add(new Product(104, "Ashwini", 550, 10,"birthday cake" , "cake5.jpg"));
-		prdlist.add(new Product(105, "Manali", 900, 10,"birthday cake with chocolate" , "birthday.jpg"));
-		prdlist.add(new Product(106, "pratibha", 1850, 10,"Anniversary cake with photo designe" , "ann2.jpg"));
-		prdlist.add(new Product(107, "pratibha", 1850, 10,"Anniversary cake with photo designe" , "ann4.jpg"));
 		
-		prdlist.add(new Product(108, "pratibha", 1850, 10,"Anniversary cake with photo designe" , "ann2.jpg"));
-		prdlist.add(new Product(109, "Ashwini", 550, 10,"birthday cake" , "cake5.jpg"));
-		prdlist.add(new Product(110, "Ashwini", 550, 10,"birthday cake" , "cake5.jpg"));
-		prdlist.add(new Product(111, "Ashwini", 550, 10,"birthday cake" , "cake5.jpg"));
-		prdlist.add(new Product(112, "Ashwini", 550, 10,"birthday cake" , "cake5.jpg"));
-		prdlist.add(new Product(113, "sahal", 850, 10,"birthday cake with Strawberry" , "cake2.jpg"));
-		prdlist.add(new Product(114, "sahal", 850, 10,"birthday cake with Strawberry" , "cake2.jpg"));
-		prdlist.add(new Product(115, "Sachin", 700, 10, "Choclate cake with vanila topping", "cake.jpg"));
-		prdlist.add(new Product(116, "Sachin", 700, 10, "Choclate cake with vanila topping", "cake.jpg"));
-		prdlist.add(new Product(117, "Sachin", 700, 10, "Choclate cake with vanila topping", "cake.jpg"));
-	}
 	public	List<Product>getAllProduct()
 	{
 		return prdlist;
@@ -38,5 +33,75 @@ public class ProductDaoImple implements ProductDao {
 				return prd;
 		return null;
 	}
-
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	@Transactional
+	public void addProduct(Product p)
+	{
+		Session session=sessionFactory.openSession();
+		Transaction tx= session.beginTransaction();
+		session.save(p);
+		tx.commit();
+		session.close();
+		
+	}
+    
+	@Override
+	@Transactional
+	public void updateProduct(Product p) {
+		Session session=sessionFactory.openSession();
+	    session.update(p);
+	    session.close();
+		
+	}
+	
+    @Transactional
+	@Override
+	public void removeProduct(Product p) {
+		Session session= sessionFactory.openSession();
+		session.delete(p);
+		session.close();
+		
+	}
+    @SuppressWarnings("unchecked")
+	public List<Product> listProduct() {
+		Session session = sessionFactory.openSession();
+		
+		List<Product> pList = session.createQuery("from Product").list();
+		session.close();
+		return pList;
+	}
+    
+    @SuppressWarnings("deprecation")
+	public void storeFile(Product p, HttpServletRequest request)
+	{
+		System.out.println(request.getRealPath("/"));
+		 String path=request.getRealPath("/")+"resources\\Images\\"+p.getCategory()+"\\"+p.getImage();
+		 System.out.println(path);
+		MultipartFile file= p.getFile();
+	
+		if (!file.isEmpty()) {
+			
+		try{
+		byte[] bytes =file.getBytes();
+		System.out.println(file.getOriginalFilename());
+		
+		
+		File serverFile = new File(path);
+		serverFile.createNewFile();
+	
+		BufferedOutputStream stream = new BufferedOutputStream(
+				new FileOutputStream(serverFile));
+		stream.write(bytes);
+		stream.close();
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+			
+	}
+	}
+	
 }

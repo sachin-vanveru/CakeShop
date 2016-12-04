@@ -20,12 +20,16 @@
     </div>
     <ul  class="nav navbar-nav">
       <li class="active"><a href="/SachinCakeShop"><label style="color: white"> Home </label></a></li>
-      <li><a href="contact_us"><label style="color: white"> Contact Us </label></a></li>
-      <li><a href="About_us"><label style="color: white"> About us </label></a></li>
-      <li><a href="view_All"><label style="color: white"> View All </label></a></li>
+      <li><a href="/SachinCakeShop/contact_us"><label style="color: white"> Contact Us </label></a></li>
+      <li><a href="/SachinCakeShop/About_us"><label style="color: white"> About us </label></a></li>
+      <li><a href="/SachinCakeShop/view_All"><label style="color: white"> View All </label></a></li>
       
-      <li><a href="Register"><label style="color: white"> Register </label></a></li>
+      <li><a href="/SachinCakeShop/Register"><label style="color: white"> Register </label></a></li>
       <li><a href="admin/addCategory"> <label style="color: white"> Add Category </label></a></li>
+      <li><a href="admin/addProduct"> <label style="color: white"> Add Product</label></a></li>
+      <li><a href="admin/updateProduct"> <label style="color: white"> update Product </label></a></li>
+      <li><a href="admin/deleteProduct"> <label style="color: white"> Delete Product </label></a></li>
+      
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li>
