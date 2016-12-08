@@ -57,13 +57,7 @@ public class ProductDaoImple implements ProductDao {
 	}
 	
     @Transactional
-	@Override
-	public void removeProduct(Product p) {
-		Session session= sessionFactory.openSession();
-		session.delete(p);
-		session.close();
-		
-	}
+	
     @SuppressWarnings("unchecked")
 	public List<Product> listProduct() {
 		Session session = sessionFactory.openSession();
@@ -102,6 +96,20 @@ public class ProductDaoImple implements ProductDao {
 		}
 			
 	}
+	}
+    @Transactional
+	@Override
+	public void removeProduct(int id) {
+	      Session session = sessionFactory.openSession();
+			
+			Product p = (Product) session.load(Product.class, new Integer(id));
+			Transaction tx = session.beginTransaction();
+			if(null != p){
+				session.delete(p);
+			}
+			tx.commit();
+			session.close();
+		
 	}
 	
 }

@@ -31,9 +31,9 @@ public class ProductServices {
 	{
 		productdao.updateProduct(p);
 	}
-	public void removeProduct(Product p)
+	public void removeProduct(int id)
 	{
-		productdao.removeProduct(p);
+		productdao.removeProduct(id);
 	}
 	public void storeFile(Product p,HttpServletRequest request)
 	{

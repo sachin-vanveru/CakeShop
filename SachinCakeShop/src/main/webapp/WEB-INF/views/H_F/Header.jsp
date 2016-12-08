@@ -25,60 +25,19 @@
       <li><a href="/SachinCakeShop/view_All"><label style="color: white"> View All </label></a></li>
       
       <li><a href="/SachinCakeShop/Register"><label style="color: white"> Register </label></a></li>
-      <li><a href="admin/addCategory"> <label style="color: white"> Add Category </label></a></li>
-      <li><a href="admin/addProduct"> <label style="color: white"> Add Product</label></a></li>
-      <li><a href="admin/updateProduct"> <label style="color: white"> update Product </label></a></li>
-      <li><a href="admin/deleteProduct"> <label style="color: white"> Delete Product </label></a></li>
+      <li><a href="/SachinCakeShop/admin/addCategory"> <label style="color: white"> Add Category </label></a></li>
+      <li><a href="/SachinCakeShop/admin/addProduct"> <label style="color: white"> Add Product</label></a></li>
+      <li><a href="/SachinCakeShop/admin/updateProduct"> <label style="color: white"> update Product </label></a></li>
+      <li><a href="/SachinCakeShop/admin/deleteProduct"> <label style="color: white"> Delete Product </label></a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li>
     <!-- Trigger the modal with a button -->
-    <a>
+    <a href="">
   <button class="btn btn-info btn-xm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"> </span> log in </button>
   </a>
     </li>
-    </ul>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-       
-          <button type="button" class="close btn btn-default" data-dismiss="modal">&times;</button>
-        <lable> Log In </lable>
-        </div>
-        <div class="modal-body">
-            <table class="table">
-             <tr> <td> <lable for="inputname" class="control-label"> name </lable> </td>
-                  <td><input type="text" class="Form-control" id="inputName" placeholder="enter name" required="required" />
-          </td>
-          </tr>
-          <tr>
-          <td><label for="pwd">Password:</label></td>
-          <td> <input type="password" class="form-control" id="pwd" placeholder="Enter password" required="required" /></td>
-        </tr>
-        </table>
-        </div>
-        <div class="modal-footer">
-        <table class=table>
-        <tr>
-        <td> <a href="Register">Register now</a> </td>
-         <td> <button type="button" class="btn btn-default" data-dismiss="modal">submit</button></td>
-        </tr>
-        </table>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-    
-    
-     </li>
     </ul>
   </div>
 </nav>

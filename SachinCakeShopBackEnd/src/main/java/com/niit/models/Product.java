@@ -37,6 +37,12 @@ public class Product implements Serializable {
 	
 	@Column(name="PNAME")
 	private String name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	@Min(1)
 	
 	@Column(name="PRICE")
@@ -46,15 +52,15 @@ public class Product implements Serializable {
 	@Column(name="Quantity")
 	private int qty;
 	
-	@OneToOne
-	@JoinColumn(name="cid")
-	private Category category;
+	
+	@Column(name="Category")
+	private String category;
 	
 	
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 	@Column(name="ImagePath")
@@ -90,13 +96,8 @@ public class Product implements Serializable {
     public void setFile(MultipartFile file) {
         this.file = file;
     }
-	private String pname;	
-	public String getPname() {
-		return pname;
-	}
-	public void setPname(String pname) {
-		this.pname = pname;
-	}
+    
+
 	
 	public double getPrice() {
 		return price;
@@ -127,7 +128,7 @@ public class Product implements Serializable {
 	public Product(int pid, String pname,double price,int qty,String desc,String i_name)
 	{
 		this.pid=pid;
-		this.pname=pname;
+		this.name=name;
 		this.price=price;
 		this.qty=qty;
 		this.desc=desc;

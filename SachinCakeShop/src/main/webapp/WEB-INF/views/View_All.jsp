@@ -35,6 +35,8 @@
    <td>Cake: {{product.pname}} </td>
    <td>Rs.{{product.price}}</td>
   <td> <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a></td>
+   <td> <a href="/views/admin/updateProduct.jsp" class="btn btn-primary">EDIT</a></td>
+   <td> <a href="/views/admin/deleteProduct.jsp" class="btn btn-primary">DELETE</a></td>
    </tr>
    </table>
 </div>

@@ -20,25 +20,30 @@
 }
 </style>
 </head>
-<body>
+<body style="background-color: #ffdd99">
 <div class="container" >
 <%@ include file="/WEB-INF/views/H_F/Header.jsp" %>
-<form:form role="form" enctype="multipart/form-data" action="checkadd" modelAttribute="product">
+
+<form:form role="form" enctype="multipart/form-data" action="addProduct" modelAttribute="product"> 
  <div class="form-group">
  <form:label  path="name">
-				<spring:message text="Product Name"/>
+	<spring:message text="Product Name"/>
 </form:label>
+
 <form:input class="form-control" path="name" />
+
 <form:errors path="name" >
 <p class="errStyle">
 * Product Name should be atleast 3 characters
 </p>
  </form:errors>
  </div>
+
  <div class="form-group">
  <form:label  path="qty">
-				<spring:message text="Quantity Available"/>
+	<spring:message text="Quantity Available"/>
 </form:label>
+
 <form:input class="form-control" path="qty" />
 <form:errors path="qty" >
 <p class="errStyle">
@@ -61,20 +66,15 @@
  <form:label  path="category">
 				<spring:message text="Category"/>
 </form:label>
-<form:select class="form-control" path="category" >
-<form:option value="Mobiles">Mobile</form:option>
-<form:option value="Laptops">Laptop</form:option>
-<form:option value="Cameras">Camera</form:option>
-</form:select>
-
+<form:input class="form-control" path="category.cid" />
  </div>
 
  <div class="form-group">
- <form:label  path="description">
+ <form:label  path="desc">
 				<spring:message text="Description"/>
 </form:label>
-  <form:input class="form-control" path="description" />
-  <form:errors path="description">
+  <form:input class="form-control" path="desc" />
+  <form:errors path="desc">
   <p class="errStyle">
 * Cannot be blank
 </p>
@@ -91,8 +91,7 @@
  </form:errors>
  </div>
  <div class="form-group">
- <input  class="btn btn-info"  type="submit"
-					value="<spring:message text="Add Product"/>" />
+ <input  class="btn btn-info"  type="submit" value="<spring:message text="Add Product"/>" />
 					
  </div>
 </form:form>
