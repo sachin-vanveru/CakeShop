@@ -1,69 +1,107 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page isELIgnored="false" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         
     <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<title>Register</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <style type="text/css">
+.errStyle {
+	color:red;
+	font-style: italic;
+	font-weight: bold;
+}
+</style>
 </head>
 <body style="background-color: #ffdd99">
+
 <div class="container">
-<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
 
-<div style="width:460px; height: 400px" class="container" >
-<center>
-<h3 style="color:maroon;">Register</h3>
+<%@ include file="/WEB-INF/views/H_F/Header.jsp" %>
+<p>
+${success}
+</p>
+<form:form  role="form" action="Register" modelAttribute="user">
 
-<form:form role="form" action="register" modelAttribute="User">
-<table class=table table-bordered">
-<tr>
-<td>
-<label for="user_name">Enter user name</label>
-</td>
-<td>
-<input type="u_name" class="form-control" id="u_name" placeholder="Enter user name">
-</td>
-</tr>
+  <div class="form-group">
+ 	<form:label  path="cust.custName">
+				<spring:message text="Enter Full Name"/>
+	</form:label>
+	<form:input class="form-control" path="cust.custName" />
+		<form:errors path="cust.custName" >
+			<p class="errStyle">
+					* Invalid Customer name
+</p>
+ </form:errors>
+   
+  <div class="form-group">
+ 	<form:label  path="userName">
+				<spring:message text="User Name"/>
+	</form:label>
+	<form:input class="form-control" path="userName" />
+		<form:errors path="userName" >
+			<p class="errStyle">
+					* Invalid Username
+</p>
+ </form:errors>
+ </div>
+ <div class="form-group">
+ 	<form:label  path="password">
+				<spring:message text="Password"/>
+	</form:label>
+	<form:input type="password" class="form-control" path="password" />
+		<form:errors path="password" >
+			<p class="errStyle">
+					* Invalid Email
+</p>
+ </form:errors>
+ 
+  </div>
+  <div class="form-group">
+ 	<form:label  path="cust.email">
+				<spring:message text="Email"/>
+	</form:label>
+	<form:input class="form-control" path="cust.email" />
+		<form:errors path="cust.email" >
+			<p class="errStyle">
+					* Invalid Email
+</p>
+ </form:errors>
+ </div>
+  <div class="form-group">
+ 	<form:label  path="cust.phone">
+				<spring:message text="Phone Number"/>
+	</form:label>
+	<form:input class="form-control" path="cust.phone" />
+		<form:errors path="cust.phone" >
+			<p class="errStyle">
+					* Invalid Phone no.
+</p>
+ </form:errors>
+ </div>
 
-<tr>
- <td>  <label for="email">Email:</label></td>
- <td> <input type="email" class="form-control" id="email" placeholder="Enter email"></td></td>
-</tr>
-<tr>
-<td><label for="Number">Phone number:</label></td>
-<td><input type="email" class="form-control" id="nos" placeholder="Enter mobile number"></td>
-</tr>
-<tr>
-<td><label for="pwd">Password:</label></td>
-<td><input type="password" class="form-control" id="pwd" placeholder="Enter password"></td>
-</tr>
-<tr>
-<td><label for="Cpwd">Confirm Password:</label></td>
-<td><input type="Cpassword" class="form-control" id="Cpwd" placeholder="Confirm password"></td>
-</tr>
-<tfoot>
-<td>
-<button type="submit" class="btn btn-default">Submit</button>
-</td>
-</tfoot>
-</table>
+  <div class="form-group">
+ 	<form:label  path="cust.address">
+				<spring:message text="Aaddress"/>
+	</form:label>
+	<form:input class="form-control" path="cust.address" />
+		<form:errors path="cust.address" >
+			<p class="errStyle">
+					* Invalid Address
+</p>
+ </form:errors>
+ </div> 
+ 
+  <button type="submit" class="btn btn-default">Submit</button>
 </form:form>
-</center>
 </div>
-</div>
+
 </body>
 </html>

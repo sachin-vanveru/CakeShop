@@ -33,8 +33,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li>
-    <!-- Trigger the modal with a button -->
-    <a href="">
+    <a href="/SachinCakeShop/Login">
   <button class="btn btn-info btn-xm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"> </span> log in </button>
   </a>
     </li>

@@ -19,7 +19,8 @@
   <div class="container">
 <%@ include file="/WEB-INF/views/H_F/Header.jsp" %>
 
-<c:if test="${error=='true'}">
+<c:if test=""${error=='true'}">
+
   <div class="errorblock">
    Your login attempt was not successful, try again.
  

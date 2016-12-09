@@ -14,26 +14,24 @@ import com.niit.models.User;
 import com.niit.models.UserRole;
 
 @Repository
-public class Cust_Dao implements CustDao {
+public class CustomerDao implements CustDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Transactional
 	@Override
-	public void addcustomer(Customer c) {
+	public void addcustomer(User u) {
 			Session session = sessionFactory.openSession();
-			Transaction tx = session.beginTransaction();
-			session.save(c);
-			User u = new User();
-			u.setCust(c);
-			u.setU_name();
-			u.setPassword();
+			session.save(u.getCust());
+			u.setEnable(true);
+			session.save(u);
+		
 			UserRole ur = new UserRole();
 			ur.setAuthority("ROLE_USER");
-			ur.setCust(c.getCustId());
+			ur.setCust(u.getCust());
 			session.save(ur);
-			tx.commit();
+			
 			session.close();
 		
 	}

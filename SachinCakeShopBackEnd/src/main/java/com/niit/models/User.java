@@ -16,12 +16,21 @@ public class User {
 	@Id
 	@SequenceGenerator(name="user_seq", sequenceName="user_seq" )
 	@GeneratedValue(strategy=GenerationType.AUTO,generator="user_seq")
+	private int uid;
+	
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
 	@Column(name="Username")
 	private String userName;
 	public String getUserName() {
 		return userName;
 	}
-	public void setU_name(String u_name) {
+	public void setUserName(String u_name) {
 		this.userName = u_name;
 	}
 	

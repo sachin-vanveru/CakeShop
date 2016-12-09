@@ -3,12 +3,15 @@ package com.niit.controllers;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.models.Product;
+import com.niit.models.User;
 import com.niit.services.ProductServices;
 
 @Controller
@@ -31,12 +34,7 @@ public class HomeController {
 		return "About_US";
 	}
 	
-	@RequestMapping(value="/Register")
-	public String Register()
-	{
-		return "Register";
-	}
-	@RequestMapping(value="/view_All")
+		@RequestMapping(value="/view_All")
 	public String View_All()
 	{
 		return "View_All";

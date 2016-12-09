@@ -15,8 +15,8 @@ import javax.persistence.Table;
 @Table(name="USERROLE")
 public class UserRole {
 	@Id
-	@SequenceGenerator(name = "user_seq", sequenceName = "user_seq")
-	@GeneratedValue(strategy=GenerationType.AUTO,generator = "user_seq")
+	@SequenceGenerator(name = "user_seq1", sequenceName = "user_seq1")
+	@GeneratedValue(strategy=GenerationType.AUTO,generator = "user_seq1")
 	@Column(name="UID")
 	private int uid;
 	

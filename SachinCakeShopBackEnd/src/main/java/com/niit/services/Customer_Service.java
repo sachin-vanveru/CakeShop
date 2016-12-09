@@ -4,13 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.niit.dao.Cust_Dao;
+import com.niit.dao.CustomerDao;
 import com.niit.models.Customer;
+import com.niit.models.User;
 @Service
 public class Customer_Service {
 	@Autowired
-	private Cust_Dao cust;
-	public void addCustomer(Customer c) {
+	private CustomerDao cust;
+	public void addCustomer(User c) {
 	
 		cust.addcustomer(c);
 		

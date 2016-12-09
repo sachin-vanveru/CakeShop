@@ -21,7 +21,7 @@ import com.niit.models.Product;
 
 
 @Controller
-public class Product_Controller {
+public class ProductController {
  
 	@Autowired
 	private ProductServices service;

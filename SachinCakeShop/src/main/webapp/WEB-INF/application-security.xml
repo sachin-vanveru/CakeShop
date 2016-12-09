@@ -27,8 +27,8 @@
    <security:authentication-provider>
      
      <security:jdbc-user-service data-source-ref="dataSource"  
-      users-by-username-query="select username,password,enabled from Customer where username=?" 
-          authorities-by-username-query="select u1.username, u2.authority from Customer u1, Userroles u2 where u1.custid = u2.custid and u1.username =?"  
+      users-by-username-query="select username,password,enabled from User where username=?" 
+          authorities-by-username-query="select u1.username, u2.authority from User u1, Userroles u2 where u1.custid = u2.custid and u1.username =?"  
   />
   
  
