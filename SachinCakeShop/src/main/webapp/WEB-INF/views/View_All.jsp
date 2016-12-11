@@ -12,7 +12,7 @@
 </head>
 <body ng-app="myapp" style="background-color: #ffdd99">
 <div class="container" >
-<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
+<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
 
 <Div class="container">
 <div ng-controller="myCtrl"  class="container">
@@ -23,20 +23,20 @@
 <table style="width: 100%;" class="table">
 <tr>
 <th ng-click="sort('pid')"><button class="btn btn-primary">Product Id</button> </th>
-<th ng-click="sort('i_name')">Product </th>
-<th ng-click="sort('pname')">Cake name </th>
+<th ng-click="sort('image')">Product </th>
+<th ng-click="sort('name')">Cake name </th>
 <th ng-click="sort('price')">price</th>
 <th>choose</th>
 </tr>
 <tr ng-repeat="product in data|filter:query|orderBy:sortKey:reverse">
    <td>{{product.pid}} </td>
-   <td ><img src="<c:url value='/resources/image/{{product.i_name}}' />"
+   <td ><img src="<c:url value='/resources/image/{{product.image}}' />"
     alt="no images" width="100" height="100" /></td>
    <td>Cake: {{product.pname}} </td>
    <td>Rs.{{product.price}}</td>
   <td> <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a></td>
-   <td> <a href="/views/admin/updateProduct.jsp" class="btn btn-primary">EDIT</a></td>
-   <td> <a href="/views/admin/deleteProduct.jsp" class="btn btn-primary">DELETE</a></td>
+   <td> <a href="edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
+   <td> <a href="delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
    </tr>
    </table>
 </div>

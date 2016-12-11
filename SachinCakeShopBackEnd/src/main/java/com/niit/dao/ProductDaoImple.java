@@ -18,31 +18,14 @@ import com.niit.models.*;
 @Repository
 public class ProductDaoImple implements ProductDao {
 	
-	public static List<Product> prdlist=new LinkedList<>();
-		
-	public	List<Product>getAllProduct()
-	{
-		return prdlist;
-	}
-	
-	@Override
-	public Product getById(int id) {
-		
-		for(Product prd :prdlist)
-			if(prd.getPid()==id)
-				return prd;
-		return null;
-	}
-	
 	@Autowired
 	private SessionFactory sessionFactory;
+	
 	@Transactional
 	public void addProduct(Product p)
 	{
 		Session session=sessionFactory.openSession();
-		Transaction tx= session.beginTransaction();
 		session.save(p);
-		tx.commit();
 		session.close();
 		
 	}
@@ -57,9 +40,8 @@ public class ProductDaoImple implements ProductDao {
 	}
 	
     @Transactional
-	
     @SuppressWarnings("unchecked")
-	public List<Product> listProduct() {
+	public List<Product> getAllProduct() {
 		Session session = sessionFactory.openSession();
 		
 		List<Product> pList = session.createQuery("from Product").list();
@@ -71,7 +53,7 @@ public class ProductDaoImple implements ProductDao {
 	public void storeFile(Product p, HttpServletRequest request)
 	{
 		System.out.println(request.getRealPath("/"));
-		 String path=request.getRealPath("/")+"resources\\Images\\"+p.getCategory()+"\\"+p.getImage();
+		 String path=request.getRealPath("/")+"resources\\image\\"+p.getCategory()+"\\"+p.getImage();
 		 System.out.println(path);
 		MultipartFile file= p.getFile();
 	
@@ -103,13 +85,19 @@ public class ProductDaoImple implements ProductDao {
 	      Session session = sessionFactory.openSession();
 			
 			Product p = (Product) session.load(Product.class, new Integer(id));
-			Transaction tx = session.beginTransaction();
 			if(null != p){
 				session.delete(p);
 			}
-			tx.commit();
 			session.close();
 		
+	}
+
+	@Override
+	public Product getById(int id) {
+		Session session=sessionFactory.openSession();
+		Product p=(Product) session.get(Product.class, new Integer(id));
+		session.close();
+		return p;
 	}
 	
 }

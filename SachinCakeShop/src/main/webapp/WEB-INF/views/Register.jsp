@@ -24,7 +24,7 @@
 
 <div class="container">
 
-<%@ include file="/WEB-INF/views/H_F/Header.jsp" %>
+<%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
 <p>
 ${success}
 </p>

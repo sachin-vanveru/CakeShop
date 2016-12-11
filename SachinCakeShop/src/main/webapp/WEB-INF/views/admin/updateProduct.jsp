@@ -22,10 +22,10 @@
 </head>
 <body>
 <div class="container">
-<%@ include file="/WEB-INF/views/H_F/Header.jsp" %>
+<%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit" >
-<form:input style="visibility:hidden;" path="pid"/>
-<form:input style="visibility:hidden;" path="image"/>
+<form:input style="visibility:hidden;" path="pid" />
+<form:input style="visibility:hidden;" path="image" />
  <div class="form-group">
  <form:label  path="name">
 				<spring:message text="Product Name"/>
@@ -64,9 +64,9 @@
 				<spring:message text="Category"/>
 </form:label>
 <form:select class="form-control" path="category" >
-<form:option value="Mobiles">Mobile</form:option>
-<form:option value="Laptops">Laptop</form:option>
-<form:option value="Cameras">Camera</form:option>
+<form:option value="Birthday">Birthday</form:option>
+<form:option value="Anniversary">Anniversary</form:option>
+<form:option value="SpecialEvents">Special Events</form:option>
 </form:select>
 
  </div>
@@ -76,10 +76,10 @@
  
  
  <div class="form-group">
- <form:label  path="description">
+ <form:label  path="desc">
 				<spring:message text="Description"/>
 </form:label>
-  <form:input class="form-control" path="description" />
+  <form:input class="form-control" path="desc" />
   <form:errors path="name">
   
   <p class="errStyle">

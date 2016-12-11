@@ -24,7 +24,7 @@
 <body style="background-color: #ffdd99">
 <div class="container">
 
-<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
+<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
 
 <div  class="container">
  <div style="height:400px" id="myCarousel" class="carousel slide" data-ride="carousel">

@@ -1,8 +1,8 @@
 package com.niit.controllers;
-import java.util.List;
 import com.niit.models.Product;
 import com.niit.services.ProductServices;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,14 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.niit.models.Product;
 
 
 @Controller
@@ -26,19 +23,22 @@ public class ProductController {
 	@Autowired
 	private ProductServices service;
 	
-	@RequestMapping(value = "/admin/addProduct", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/add", method = RequestMethod.GET)
 	public ModelAndView addProduct() {
-		return new ModelAndView("/admin/addProduct", "product", new Product());
+		Product p = new Product();
+		return new ModelAndView("admin/addProduct", "product",p);
 	}
 
-	@RequestMapping(value = "/admin/addProduct", method = RequestMethod.POST)
-	public ModelAndView AddActionPage(HttpServletRequest request,@ModelAttribute("product") @Validated Product p, BindingResult result, Model model)
+	@RequestMapping(value = "/admin/add", method = RequestMethod.POST)
+	public ModelAndView AddActionPage(HttpServletRequest request,@ModelAttribute("product") @Validated Product p,
+			BindingResult result,Model m)
 	   {
-		System.out.println("adding...");
+		System.out.println("adding..."+p);
+		System.out.println(p.getCategory());//+"  "+p.getPrice()+"  "+p.getImage()+"  "+p.getDesc()+"  "+p.getFile().getName());
 		if (result.hasErrors()) {
-			System.out.println("Err:"+result.getFieldError().getRejectedValue());
+			System.out.println("Err:"+result.getAllErrors());
 
-			return new ModelAndView("Add");
+			return new ModelAndView("admin/addProduct");
 		} else {
 			p.setImage(p.getFile().getOriginalFilename());
 			service.storeFile(p, request);
@@ -47,8 +47,9 @@ public class ProductController {
 		}
 	}
 	
-	@RequestMapping(value = "/admin/deleteProduct", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String DeletePage() {
+		
 		return "/admin/deleteProduct";
 	}
 
@@ -58,12 +59,12 @@ public class ProductController {
 		return new ModelAndView("View_All","msg","Product Deleted Sucessfully");
 	}
 	
-	@RequestMapping(value = "/admin/updateProduct", method = RequestMethod.GET)
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
 	public ModelAndView EditPage(@RequestParam("id") int id) {
 
 		Product p = service.getById(id);
 
-		return new ModelAndView("Edit", "product", p);
+		return new ModelAndView("/admin/updateProduct", "product", p);
 	}
 	
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
@@ -71,7 +72,7 @@ public class ProductController {
 		
 		if (result.hasErrors()) {
 
-			return new ModelAndView("Edit");
+			return new ModelAndView("/admin/updateProduct");
 		} 
 		else {
 			System.out.println(p.getImage());

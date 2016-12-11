@@ -13,17 +13,17 @@
 </head>
 <body style="background-color: #ffdd99">
 <div class="container">
-<%@include file="/WEB-INF/views/H_F/Header.jsp" %>
+<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
 
     <table style="align:'center'" class="table">
      <tr>
-          <td> <img src="<c:url value='/resources/image/${product.i_name}' />" alt="no images" width="300" height="300" /></td>
+         <td> <img src="<c:url value='/resources/image/${product.image}' />" alt="no images" width="300" height="300" /></td>
           </tr>
      
   <tr><td>product Id:  ${product.pid} </td>
 </tr>
 <tr>
-<td>Product name: ${product.pname} </td>
+<td>Product name: ${product.name} </td>
 </tr>
 <tr><td>Product Description : ${product.desc}</td></tr>
 <tr><td>Price ${product.price}</td> </tr>

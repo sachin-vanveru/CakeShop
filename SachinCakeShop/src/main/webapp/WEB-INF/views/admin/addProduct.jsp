@@ -22,80 +22,82 @@
 </head>
 <body style="background-color: #ffdd99">
 <div class="container" >
-<%@ include file="/WEB-INF/views/H_F/Header.jsp" %>
+<%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
+<form:form role="form"  action="add" modelAttribute="product" enctype="multipart/form-data"> 
+ 	<div class="form-group">
+ 				<form:label  path="name">
+						<spring:message text="Product Name"/>
+				</form:label>
+				<form:input  class="form-control" path="name" />
+				<form:errors path="name" >
+						<p class="errStyle">
+								* Product Name should be atleast 3 characters
+						</p>
+ 				</form:errors>
+ 	</div>
 
-<form:form role="form" enctype="multipart/form-data" action="addProduct" modelAttribute="product"> 
- <div class="form-group">
- <form:label  path="name">
-	<spring:message text="Product Name"/>
-</form:label>
+ 	<div class="form-group">
+ 					<form:label  path="qty">
+							<spring:message text="Quantity Available"/>
+					</form:label>
+					<form:input class="form-control" path="qty" />
+					<form:errors path="qty" >
+							<p class="errStyle">
+									* should be greater than 1
+						    </p>
+ 				    </form:errors>
+ 	</div>
 
-<form:input class="form-control" path="name" />
+ 	<div class="form-group">
+ 				<form:label  path="price">
+					<spring:message text="Product Price"/>
+				</form:label>
+				<form:input class="form-control" path="price" />
+				<form:errors path="price" >
+						<p class="errStyle">
+										* should be greater than 1
+						</p>
+ 				</form:errors>
+ 	</div>
+	<div class="form-group">
+ 				<form:label  path="category">
+							<spring:message text="Category"/>
+				</form:label>
+				<form:select class="form-control" path="category" >
+						<form:option value="Birthday">Birthday</form:option>
+						<form:option value="Anniversary">Anniversary</form:option>
+						<form:option value="SpecialEvents">Special Events </form:option>
+				</form:select>
 
-<form:errors path="name" >
-<p class="errStyle">
-* Product Name should be atleast 3 characters
-</p>
- </form:errors>
- </div>
-
- <div class="form-group">
- <form:label  path="qty">
-	<spring:message text="Quantity Available"/>
-</form:label>
-
-<form:input class="form-control" path="qty" />
-<form:errors path="qty" >
-<p class="errStyle">
-* should be greater than 1
-</p>
- </form:errors>
- </div>
- <div class="form-group">
- <form:label  path="price">
-				<spring:message text="Product Price"/>
-</form:label>
-<form:input class="form-control" path="price" />
-<form:errors path="price" >
-<p class="errStyle">
-* should be greater than 1
-</p>
- </form:errors>
- </div>
- <div class="form-group">
- <form:label  path="category">
-				<spring:message text="Category"/>
-</form:label>
-<form:input class="form-control" path="category.cid" />
- </div>
-
- <div class="form-group">
- <form:label  path="desc">
-				<spring:message text="Description"/>
-</form:label>
-  <form:input class="form-control" path="desc" />
-  <form:errors path="desc">
-  <p class="errStyle">
-* Cannot be blank
-</p>
- </form:errors>
- </div>
+ 	</div>
+ 	<div class="form-group">
+ 				<form:label  path="desc">
+					<spring:message text="Description"/>
+				</form:label>
+  				<form:input class="form-control" path="desc" />
+  				<form:errors path="desc">
+  					<p class="errStyle">
+							* Cannot be blank
+					</p>
+ 				</form:errors>
+ 	</div>
  
   <div class="form-group">
- <label>Upload Image</label>
-  <form:input type="file" path="file"  class="form-control" />
-   <form:errors path="file" >
-  <p class="errStyle">
- * Cannot be blank
- </p>
- </form:errors>
- </div>
- <div class="form-group">
- <input  class="btn btn-info"  type="submit" value="<spring:message text="Add Product"/>" />
-					
- </div>
+ 				<label>Upload Image</label>
+  				<form:input type="file" path="file"  class="form-control" />
+   					<form:errors path="file" >
+  							<p class="errStyle">
+ 								* Cannot be blank
+ 							</p>
+ 					</form:errors>
+ 	</div>
+ 
+ 	<div class="form-group">
+   			
+ 			<button type="submit" class="btn btn-default">Add Product</button>
+ 							
+ 	</div>
 </form:form>
-
 </div>
 </body>
 </html>
