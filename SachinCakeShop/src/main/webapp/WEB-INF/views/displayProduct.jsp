@@ -17,7 +17,7 @@
 
     <table style="align:'center'" class="table">
      <tr>
-         <td> <img src="<c:url value='/resources/image/${product.image}' />" alt="no images" width="300" height="300" /></td>
+         <td> <img src="<c:url value='/resources/image/${product.category}/${product.image}' />" alt="no images" width="300" height="300" /></td>
           </tr>
      
   <tr><td>product Id:  ${product.pid} </td>

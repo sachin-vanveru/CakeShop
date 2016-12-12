@@ -55,6 +55,7 @@ public class ProductController {
 
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public ModelAndView DeleteActionPage(@RequestParam("id") int id) {
+		System.out.println("ID recieved for deletion: "+ id);
 		service.removeProduct(id);
 		return new ModelAndView("View_All","msg","Product Deleted Sucessfully");
 	}
@@ -82,7 +83,7 @@ public class ProductController {
 			service.storeFile(p,request);
 			}
 			service.udateProduct(p);
-			return new ModelAndView("ViewAll","msg","Product Updated Sucessfully");
+			return new ModelAndView("View_All","msg","Product Updated Sucessfully");
 		}
 
 	}

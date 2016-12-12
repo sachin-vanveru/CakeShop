@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" isELIgnored="false" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -44,7 +44,7 @@
   
   <button type="submit"  class="btn btn-default" >Submit</button>
 </form>
-<h4>Not A User ? <a href="register">Sign Up Here</a></h4>
+<h4>Not A User ? <a href="Register">Sign Up Here</a></h4>
 </div>
 </body>
 </html>

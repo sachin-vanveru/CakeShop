@@ -35,6 +35,7 @@ public class ProductDaoImple implements ProductDao {
 	public void updateProduct(Product p) {
 		Session session=sessionFactory.openSession();
 	    session.update(p);
+	    session.flush();
 	    session.close();
 		
 	}
@@ -84,10 +85,12 @@ public class ProductDaoImple implements ProductDao {
 	public void removeProduct(int id) {
 	      Session session = sessionFactory.openSession();
 			
-			Product p = (Product) session.load(Product.class, new Integer(id));
-			if(null != p){
+			Product p = (Product) session.get(Product.class, new Integer(id));
+			System.out.println(p.getName());
+			if(p!=null){
 				session.delete(p);
 			}
+			session.flush();
 			session.close();
 		
 	}

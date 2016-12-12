@@ -20,6 +20,10 @@
  <input  type="text" id="query" ng-model="query" />
  <button class="default"><span class="glyphicon glyphicon-search"> </span></button>
  </div>
+ <span>
+ ${msg}
+ <br/>
+ </span>
 <table style="width: 100%;" class="table">
 <tr>
 <th ng-click="sort('pid')"><button class="btn btn-primary">Product Id</button> </th>
@@ -30,7 +34,7 @@
 </tr>
 <tr ng-repeat="product in data|filter:query|orderBy:sortKey:reverse">
    <td>{{product.pid}} </td>
-   <td ><img src="<c:url value='/resources/image/{{product.image}}' />"
+   <td ><img src="<c:url value='/resources/image/{{product.category}}/{{product.image}}' />"
     alt="no images" width="100" height="100" /></td>
    <td>Cake: {{product.pname}} </td>
    <td>Rs.{{product.price}}</td>

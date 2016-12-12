@@ -25,7 +25,10 @@
       <li><a href="/SachinCakeShop/view_All"><label style="color: white"> View All </label></a></li>
       
       <li><a href="/SachinCakeShop/Register"><label style="color: white"> Register </label></a></li>
-      <li><a href="/SachinCakeShop/admin/add"> <label style="color: white"> Add Product</label></a></li>      
+      
+      
+      <li><a href="/SachinCakeShop/admin/add"> <label style="color: white"> Add Product</label></a></li>
+            
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <li>
