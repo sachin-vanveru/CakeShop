@@ -21,10 +21,10 @@
 </head>
 <body style="background-color: #ffdd99" >
 <Div class="continer">
-<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
- <h1 Style="color:graytext; " align="center" >About Us</h1>
+<h1 Style="color:graytext; " align="center" >About Us</h1>
 
 <div class="container">
+<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
 <p style="color:black">
 Sachin Cake shop is a premium cake shop in Coimbatore and Trichy. We opened in 2012, 
 when Trichy was grappling with a lack of choice for quality cakes. </p>
@@ -39,9 +39,9 @@ Problems like non-functional website, lack of response and long delivery wait ti
 </div> 
 <div class="container">
 <marquee>
-<table>
+<table class="table">
 <tr>
-<td><img src="resources/image/hd1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td> 
+<td><img src="resources/image/hd1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
 <td><img src="resources/image/hd2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
 <td><img src="resources/image/hd3.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
 <td><img src="resources/image/birthday1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>

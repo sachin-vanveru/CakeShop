@@ -9,6 +9,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name="User")
@@ -26,6 +30,7 @@ public class User {
 	}
 
 	@Column(name="Username")
+	@NotBlank
 	private String userName;
 	public String getUserName() {
 		return userName;
@@ -45,6 +50,8 @@ public class User {
 	}
 	
 	@Column(name="PASSWORD")
+	@NotBlank
+	@Min(6)
 	public String getPassword() {
 		return password;
 	}

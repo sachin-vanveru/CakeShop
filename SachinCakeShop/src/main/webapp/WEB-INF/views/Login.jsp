@@ -15,7 +15,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: #ffdd99">
   <div class="container">
 <%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
 
@@ -41,6 +41,8 @@
     <label for="password">Password:</label>
     <input type="password" class="form-control" name="j_password" />
   </div>
+  		  <input type="hidden" name="${_csrf.parameterName}"
+			value="${_csrf.token}" />
   
   <button type="submit"  class="btn btn-default" >Submit</button>
 </form>

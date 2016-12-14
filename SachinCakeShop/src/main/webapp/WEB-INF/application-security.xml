@@ -19,9 +19,10 @@
      <security:intercept-url pattern="/" access="permitAll"/>
      <security:intercept-url pattern="/admin**" access="hasRole('ADMIN')"/>
      
-  <security:form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/fail2login" />   
+  <security:form-login  login-page="/login" default-target-url="/welcome" authentication-failure-url="/fail2login" />   
   <security:logout  logout-success-url="/logout" />
-   <security:csrf disabled="true"/>
+   
+   <security:csrf/>
   </security:http>
 
     <security:authentication-manager>
@@ -32,8 +33,6 @@
       users-by-username-query="select username,password,enabled from User where username=?" 
           authorities-by-username-query="select u1.username, u2.authority from User u1, Userroles u2 where u1.custid = u2.custid and u1.username =?"  
   />
-  
- 
   
    </security:authentication-provider>
  </security:authentication-manager>        

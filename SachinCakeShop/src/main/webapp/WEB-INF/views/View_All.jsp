@@ -36,11 +36,14 @@
    <td>{{product.pid}} </td>
    <td ><img src="<c:url value='/resources/image/{{product.category}}/{{product.image}}' />"
     alt="no images" width="100" height="100" /></td>
-   <td>Cake: {{product.pname}} </td>
+   <td> {{product.name}} </td>
    <td>Rs.{{product.price}}</td>
   <td> <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a></td>
+  <security:authorize access="hasRole('ROLE_ADMIN')">
    <td> <a href="edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
    <td> <a href="delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
+   </security:authorize>
+   
    </tr>
    </table>
 </div>

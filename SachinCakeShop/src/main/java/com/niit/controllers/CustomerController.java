@@ -28,7 +28,7 @@ public class CustomerController {
 	@Autowired
 	private Customer_Service customerService;
 	
-	@RequestMapping(value="/Login")
+	@RequestMapping(value="/login")
 	public String Login()
 	{
 		return "Login";
