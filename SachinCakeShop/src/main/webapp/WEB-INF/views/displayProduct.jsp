@@ -18,6 +18,19 @@
     <table style="align:'center'" class="table">
      <tr>
          <td> <img src="<c:url value='/resources/image/${product.category}/${product.image}' />" alt="no images" width="300" height="300" /></td>
+          
+          <td><security:authorize access="isAuthenticated()" >
+              
+              <a href="#" class="btn btn_primary" ng-click="addItemToCart('${param.id} }')" >
+               <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>       
+              
+          </security:authorize>
+            <security:authorize access="isAnonymous()">
+            <a href="login" class="btn btn_primary">
+            <span class="glyphicon glyphicon-shopping-cart"></span>add to cart
+            </a>
+            </security:authorize>
+           </td>
           </tr>
      
   <tr><td>product Id:  ${product.pid} </td>
@@ -28,8 +41,9 @@
 <tr><td>Product Description : ${product.desc}</td></tr>
 <tr><td>Price ${product.price}</td> </tr>
 <tr><td>quantity ${product.qty}</td></tr>
-
 </table>
 </div>
+
+					
 </body>
 </html>

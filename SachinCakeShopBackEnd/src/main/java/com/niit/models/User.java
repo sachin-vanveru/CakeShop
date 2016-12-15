@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -41,6 +42,7 @@ public class User {
 	
 	@OneToOne
 	@JoinColumn(name="custId")
+	@Valid
 	private Customer cust;
 	public Customer getCust() {
 		return cust;
@@ -51,7 +53,6 @@ public class User {
 	
 	@Column(name="PASSWORD")
 	@NotBlank
-	@Min(6)
 	public String getPassword() {
 		return password;
 	}
@@ -59,13 +60,13 @@ public class User {
 		this.password = password;
 	}
 	@Column(name="ENABLE")
-	public Boolean getEnable() {
+	public boolean getEnable() {
 		return enable;
 	}
-	public void setEnable(Boolean enable) {
+	public void setEnable(boolean enable) {
 		this.enable = enable;
 	}
 	
 	private String password;
-	private Boolean enable ;
+	private boolean enable ;
 }

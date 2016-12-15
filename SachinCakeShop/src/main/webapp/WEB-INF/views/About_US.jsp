@@ -21,10 +21,10 @@
 </head>
 <body style="background-color: #ffdd99" >
 <Div class="continer">
-<h1 Style="color:graytext; " align="center" >About Us</h1>
-
 <div class="container">
 <%@include file="/WEB-INF/views/Resource/Header.jsp" %>
+<h1 Style="color:graytext; " align="center" >About Us</h1>
+
 <p style="color:black">
 Sachin Cake shop is a premium cake shop in Coimbatore and Trichy. We opened in 2012, 
 when Trichy was grappling with a lack of choice for quality cakes. </p>

@@ -20,26 +20,37 @@
       <a class="navbar-brand" href="#"><label style="color: white"> Cakes Shop </label></a>
     </div>
     <ul  class="nav navbar-nav">
-      <li class="active"><a href="/SachinCakeShop"><label style="color: white"> Home </label></a></li>
-      <li><a href="/SachinCakeShop/contact_us"><label style="color: white"> Contact Us </label></a></li>
-      <li><a href="/SachinCakeShop/About_us"><label style="color: white"> About us </label></a></li>
-      <li><a href="/SachinCakeShop/view_All"><label style="color: white"> View All </label></a></li>
+      <li  class="active"><a style="color: white" href="/SachinCakeShop">Home </a></li>
+      <li><a style="color: white; font-family: serif; font-size: large; " href="/SachinCakeShop/contact_us"> Contact Us</a></li>
+      <li><a style="color: white; font-family: serif; font-size: large; " href="/SachinCakeShop/About_us"> About us</a></li>
+      <li><a style="color: white; font-family: serif; font-size: large; " href="/SachinCakeShop/view_All">View All </a></li>
       
-      <li><a href="/SachinCakeShop/Register"><label style="color: white"> Register </label></a></li>
+      
       
       <security:authorize access="hasRole('ROLE_ADMIN')">
          
-      		<li><a href="/SachinCakeShop/admin/add"> <label style="color: white"> Add Product</label></a></li>
+      		<li><a style="color: white; font-family: serif; font-size: large; "  href="/SachinCakeShop/admin/add">  Add Product</a></li>
       </security:authorize>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <li>
-    <a href="/SachinCakeShop/login">
-  <button style="background-color: red; border: red" class="btn btn-info btn-xm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"> </span> log in </button>
-  </a>
-    </li>
-    </ul>
-  </div>
+              <li><a style="color: white; font-family: serif; font-size: large; "  href="/SachinCakeShop/Register"> <span class="glyphicon glyphicon-user"></span> Register</a></li>
+			<security:authorize access="isAnonymous()">
+				<li><a style="color: white; font-family: serif; font-size: large; "  href="login"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a></li>
+				<li><a style="color: white; font-family: serif; font-size: large; "  href="login"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</security:authorize>
+			<security:authorize access="isAuthenticated()">
+				<li><span class="glyphicon"></span>Welcome <%= request.getUserPrincipal().getName() %>
+				</li>
+				<security:authorize access="hasRole('ROLE_USER')">
+				<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/memberShip'/>"><span
+						class="glyphicon glyphicon-hand-right"></span>View Cart</a></li>
+						</security:authorize>
+				<li><a style="color: white; font-family: serif; font-size: large; "  href='<c:url value="logout" />' class="btn btn_primary">
+						<span class="glyphicon glyphicon-log-out"></span> Logout
+				</a></li>
+			</security:authorize>
+		</ul>
+		</div>
 </nav>
 
 </Div>

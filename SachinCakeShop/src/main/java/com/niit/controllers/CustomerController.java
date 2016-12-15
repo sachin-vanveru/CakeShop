@@ -4,6 +4,7 @@ import java.security.Principal;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -41,10 +42,11 @@ public class CustomerController {
 		return new ModelAndView("Register","user", new User());
 	}
 	@RequestMapping(value="/Register" , method=RequestMethod.POST)
-	public ModelAndView Register(@ModelAttribute("user")@Validated User c,BindingResult result,Model m)
+	public ModelAndView Register(@ModelAttribute("user")@Valid User c,BindingResult result,Model m)
 	{
 		if(result.hasErrors())
 		{
+			//System.out.println(c.getPassword());
 			return new ModelAndView("Register");
 		}
 		else {
@@ -52,7 +54,7 @@ public class CustomerController {
 			
 		}
 		
-		return new ModelAndView("Register","success", "Registered Sucessfully please login now...");
+		return new ModelAndView("Login","logoutmsg", "Registered Sucessfully please login now...");
 	}
 	@RequestMapping(value="/fail2login", method=RequestMethod.GET)
 	public ModelAndView loginerror(ModelMap model)
