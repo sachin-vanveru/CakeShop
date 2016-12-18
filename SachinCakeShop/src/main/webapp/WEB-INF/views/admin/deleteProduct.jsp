@@ -12,7 +12,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="<c:url value='/resources/js/AngularjsController.js'/>"></script>
 </head>
-<body>
+<body style="background-color: #ffdd99">
 <div class="container">
 <%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
  <h3>Are you sure , you want to delete this product?</h3>

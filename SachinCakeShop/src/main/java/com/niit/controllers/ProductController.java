@@ -47,20 +47,20 @@ public class ProductController {
 		}
 	}
 	
-	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/delete", method = RequestMethod.GET)
 	public String DeletePage() {
 		
 		return "/admin/deleteProduct";
 	}
 
-	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/delete", method = RequestMethod.POST)
 	public ModelAndView DeleteActionPage(@RequestParam("id") int id) {
 		System.out.println("ID recieved for deletion: "+ id);
 		service.removeProduct(id);
 		return new ModelAndView("View_All","msg","Product Deleted Sucessfully");
 	}
 	
-	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/edit", method = RequestMethod.GET)
 	public ModelAndView EditPage(@RequestParam("id") int id) {
 
 		Product p = service.getById(id);
@@ -68,7 +68,7 @@ public class ProductController {
 		return new ModelAndView("/admin/updateProduct", "product", p);
 	}
 	
-	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/edit", method = RequestMethod.POST)
 	public ModelAndView EditActionPage(HttpServletRequest request,@ModelAttribute("product") @Validated Product p, BindingResult result, Model model) {
 		
 		if (result.hasErrors()) {

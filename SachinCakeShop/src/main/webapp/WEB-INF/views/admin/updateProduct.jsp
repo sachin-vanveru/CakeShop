@@ -20,7 +20,7 @@
 }
 </style>
 </head>
-<body>
+<body style="background-color: #ffdd99">
 <div class="container">
 <%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit" >

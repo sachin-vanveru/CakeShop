@@ -40,8 +40,8 @@
    <td>Rs.{{product.price}}</td>
   <td> <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a></td>
   <security:authorize access="hasRole('ROLE_ADMIN')">
-   <td> <a href="edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
-   <td> <a href="delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
+   <td> <a href="admin/edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
+   <td> <a href="admin/delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
    </security:authorize>
    
    </tr>

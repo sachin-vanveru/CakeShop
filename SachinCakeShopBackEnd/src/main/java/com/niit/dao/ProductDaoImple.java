@@ -2,7 +2,6 @@ package com.niit.dao;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.transaction.Transactional;
