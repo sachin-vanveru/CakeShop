@@ -27,7 +27,7 @@
           </security:authorize>
             <security:authorize access="isAnonymous()">
             <a href="login" class="btn btn_primary">
-            <span class="glyphicon glyphicon-shopping-cart"></span>add to cart
+            <span class="glyphicon glyphicon-shopping-cart"></span>add to cart 
             </a>
             </security:authorize>
            </td>

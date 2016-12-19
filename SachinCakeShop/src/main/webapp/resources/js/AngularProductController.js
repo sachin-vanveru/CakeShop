@@ -10,4 +10,5 @@ app.controller('myCtrl',function($scope,$http) {
 		$scope.sortKey=keyname;
 		$scope.reverse=!$scope.reverse;
 	}
+	
 });
