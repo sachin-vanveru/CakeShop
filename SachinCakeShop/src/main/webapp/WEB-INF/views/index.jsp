@@ -24,7 +24,7 @@
 <body style="background-color: #ffdd99">
 <div class="container">
 
-<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@include file="/WEB-INF/views/Template/Header.jsp" %>
 
 <div  class="container">
  <div style="height:400px" id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -71,6 +71,7 @@
   </div>
   <div style="width:100px" class="container"><iframe width="560" height="315" src="https://www.youtube.com/embed/eE-zAcJusWU" frameborder="0" allowfullscreen></iframe>
   </div>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
   
 </body>

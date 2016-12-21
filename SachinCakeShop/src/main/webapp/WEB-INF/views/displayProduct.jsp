@@ -12,16 +12,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #ffdd99">
-<div class="container">
-<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
+<div ng-app="myapp" class="container">
+<%@include file="/WEB-INF/views/Template/Header.jsp" %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="<c:url value='/resources/js/AngularProductController.js' />"></script>
 
     <table style="align:'center'" class="table">
      <tr>
          <td> <img src="<c:url value='/resources/image/${product.category}/${product.image}' />" alt="no images" width="300" height="300" /></td>
           
-          <td><security:authorize access="isAuthenticated()" >
+          <td  ng-controller="myCtrl"  ><security:authorize access="isAuthenticated()" >
               
-              <a href="#" class="btn btn_primary" ng-click="addItemToCart('${param.id} }')" >
+              <a class="btn btn_primary" ng-click="addItemToCart('${product.pid}')" >
                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>       
               
           </security:authorize>

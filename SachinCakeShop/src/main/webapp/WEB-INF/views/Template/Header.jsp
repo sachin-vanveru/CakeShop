@@ -33,8 +33,9 @@
       </security:authorize>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-              <li><a style="color: white; font-family: serif; font-size: large; "  href="/SachinCakeShop/Register"> <span class="glyphicon glyphicon-user"></span> Register</a></li>
+       
 			<security:authorize access="isAnonymous()">
+			       <li><a style="color: white; font-family: serif; font-size: large; "  href="/SachinCakeShop/Register"> <span class="glyphicon glyphicon-user"></span> Register</a></li>
 				<li><a style="color: white; font-family: serif; font-size: large; "  href="login"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a></li>
 				<li><a style="color: white; font-family: serif; font-size: large; "  href="login"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</security:authorize>
@@ -45,7 +46,7 @@
 				<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/memberShip'/>"><span
 						class="glyphicon glyphicon-hand-right"></span>View Cart</a></li>
 						</security:authorize>
-				<li><a style="color: white; font-family: serif; font-size: large; "  href='<c:url value="logout" />' class="btn btn_primary">
+				<li><a style="color: white; font-family: serif; font-size: large; "  href='<c:url value="/logout1" />' class="btn btn_primary">
 						<span class="glyphicon glyphicon-log-out"></span> Logout
 				</a></li>
 			</security:authorize>

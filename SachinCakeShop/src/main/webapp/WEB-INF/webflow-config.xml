@@ -12,6 +12,7 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd
 http://www.springframework.org/schema/webflow-config
 http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd">
+
 <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
 	<property name="order" value="0" />
 	<property name="flowRegistry" ref="flowRegistry" />
@@ -27,8 +28,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd">
 	</flow:flow-executor>
 
 	<flow:flow-registry id="flowRegistry">
-		<flow:flow-location id="memberShip"
-			path="/WEB-INF/views/cartflow.xml"></flow:flow-location>
+		<flow:flow-location id="memberShip" path="/WEB-INF/cartflow.xml"> </flow:flow-location>
 	</flow:flow-registry>
 
 

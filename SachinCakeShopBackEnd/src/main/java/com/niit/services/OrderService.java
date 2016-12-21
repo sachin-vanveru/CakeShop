@@ -1,20 +1,22 @@
 package com.niit.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.niit.dao.OrderDao;
 import com.niit.dao.OrderDaoImpl;
 import com.niit.models.Cart;
+import com.niit.models.Item;
 import com.niit.models.Order;
 
 @Service
 public class OrderService {
-
-	 @Autowired
-	    private OrderDaoImpl orderDao;
-
-	    @Autowired
-	    private CartItemService cartService;
+	
+		@Autowired
+	    private OrderDao orderDao;
+	    private CartService cartService;
 
 	    public void addOrder(Order userOrder) {
 	    	orderDao.addOrder(userOrder);
@@ -22,10 +24,10 @@ public class OrderService {
 
 	    public double getOrderGrandTotal(int cartId) {
 	        double grandTotal=0;
-	        Cart cart=cartService.getCartItemByItemId(cartId);
-	        List<CartItem> cartItems = cart.getCartItems();
+	        Cart cart = cartService.getCartById(cartId);
+	        List<Item> cartItems = cart.getItem();
 
-	        for (CartItem item : cartItems) {
+	        for (Item item : cartItems) {
 	            grandTotal+=item.getTotalPrice();
 	        }
 

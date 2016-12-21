@@ -19,7 +19,7 @@ h4   {color: white;}
 <body style="background-color: #ffdd99">
 
 <div class="container">
-<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@include file="/WEB-INF/views/Template/Header.jsp" %>
 <table  class="table table-condensed">
 <tr>
 <td>

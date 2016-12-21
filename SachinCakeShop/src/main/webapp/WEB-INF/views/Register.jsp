@@ -23,12 +23,13 @@
 
 <div class="container">
 
-<%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@ include file="/WEB-INF/views/Template/Header.jsp" %>
 <p>
 ${success}
 </p>
 <form:form  role="form" action="Register" modelAttribute="user">
 
+ <div class="col-sm-5">
   <div class="form-group">
  	<form:label  path="cust.custName">
 				<spring:message text="Enter Full Name"/>
@@ -98,8 +99,9 @@ ${success}
  </form:errors>
  </div> 
  
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button style="margin-left: 40%;" type="submit" class="btn btn-default">Submit</button>
 </form:form>
+</div>
 </div>
 
 </body>

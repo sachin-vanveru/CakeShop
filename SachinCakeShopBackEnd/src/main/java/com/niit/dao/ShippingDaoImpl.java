@@ -1,40 +1,42 @@
 package com.niit.dao;
-
 import java.security.Principal;
 
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
+import com.niit.models.Customer;
 import com.niit.models.ShippingAddress;
+import com.niit.models.User;
 
+@Repository
 public class ShippingDaoImpl implements ShippingDao {
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Transactional
+	public void addShippingAddress(ShippingAddress add, Principal p)
+	{
+	  Session	session =sessionFactory.openSession();
+	
+	  
+	  Query query = session.createQuery("from User where userName = ?");
+      query.setString(0, p.getName());
 
-	@Override
-	public void addShippingAddress(ShippingAddress add, Principal p) {
-		@Autowired
-		private SessionFactory sessionFactory;
-		
-		public void addShippingAddress(ShippingAddress add, Principal p)
-		{
-		  Session	session =sessionFactory.openSession();
-		  Transaction tx = session.beginTransaction();
-		  
-		  Query query = session.createQuery("from Customer where username = ?");
-	      query.setString(0, p.getName());
+      User u= (User) query.uniqueResult();
+      Customer c = u.getCust();
+     
+      c.setShippingAddress(add);
+      add.setUsersDetail(c);
+      session.save(add);
+      session.update(c);
+      session.close();
 
-	      Customer c= (Customer) query.uniqueResult();
-	     
-	      c.setShippingAddress(add);
-	      add.setUsersDetail(c);
-	      session.save(add);
-	      session.update(c);
-	      tx.commit();
-	      session.close();
-
-		}
-
-		
-		
 	}
 
 }

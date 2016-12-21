@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.hibernate.Transaction;
+
+import com.niit.models.Cart;
 import com.niit.models.Customer;
 import com.niit.models.User;
 import com.niit.models.UserRole;
@@ -23,6 +25,13 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public void addcustomer(User u) {
 			Session session = sessionFactory.openSession();
+			Cart c = new Cart();
+			c.setGrandTotal(0);
+			c.setUserDetails(u.getCust());
+			session.save(c);
+			Customer cust = u.getCust();
+			cust.setCart(c);
+			
 			session.save(u.getCust());
 			u.setEnable(true);
 			session.save(u);
@@ -58,9 +67,9 @@ public class CustomerDaoImpl implements CustomerDao {
 	public Customer getUserByUsername(String username) {
 		 Session session = sessionFactory.openSession();
 	        
-	        Query query = session.createQuery("from Customer where username = ?");
+	        Query query = session.createQuery("from User where userName = ?");
 	        query.setString(0, username);
-
-	        return (Customer) query.uniqueResult();
+	        User u = (User)query.uniqueResult();
+	        return u.getCust();
 	    }
 }

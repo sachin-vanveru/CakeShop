@@ -8,13 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.webflow.execution.RequestContext;
 
-import com.niit.dao.ShippingDaoImpl;
+import com.niit.dao.ShippingDao;
 import com.niit.models.ShippingAddress;
 
 @Service
-public class ShippingServices implements Serializable {
+public class ShippingServices  {
+	
 	@Autowired
-	private ShippingDaoImpl shipDAO;
+	private ShippingDao shipDAO ;
+	
 	public String addShippingAddress(ShippingAddress add, RequestContext context)
 	{
 		System.out.println(add);

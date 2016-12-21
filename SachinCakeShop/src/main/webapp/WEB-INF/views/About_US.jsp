@@ -22,7 +22,7 @@
 <body style="background-color: #ffdd99" >
 <Div class="continer">
 <div class="container">
-<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@include file="/WEB-INF/views/Template/Header.jsp" %>
 <h1 Style="color:graytext; " align="center" >About Us</h1>
 
 <p style="color:black">

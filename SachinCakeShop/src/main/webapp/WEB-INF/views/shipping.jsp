@@ -20,7 +20,7 @@
 </head>
 <body style="background-color: #ffdd99">
  <div class="container">
-<%@ include file="/WEB-INF/views/Resource/Header.jsp" %> 
+<%@ include file="/WEB-INF/views/Template/Header.jsp" %> 
 <h3>Shipping Details</h3>
    <form:form modelAttribute="ship" role="form">
    <div class="form-group">

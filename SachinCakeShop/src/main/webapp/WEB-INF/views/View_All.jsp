@@ -12,7 +12,7 @@
 </head>
 <body ng-app="myapp" style="background-color: #ffdd99">
 <div class="container" >
-<%@include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@include file="/WEB-INF/views/Template/Header.jsp" %>
 
 <Div class="container">
 <div ng-controller="myCtrl"  class="container">

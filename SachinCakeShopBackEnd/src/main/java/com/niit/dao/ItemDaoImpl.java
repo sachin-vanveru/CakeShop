@@ -2,13 +2,16 @@ package com.niit.dao;
 
 import java.util.List;
 
+
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.niit.models.Cart;
 import com.niit.models.Item;
 
 @Repository
@@ -50,11 +53,34 @@ public class ItemDaoImpl implements ItemDao {
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public List<Item> listitem() {
+	public List<Item> listitem(int itemId) {
 		Session session=sessionFactory.openSession();
 		List<Item> iList=session.createQuery("from Item").list();
 		session.close();
 		return iList;
+
 	}
 
-}
+	@Override
+	public void removeAllCartItems(Cart cart) {
+		 {
+		        List<Item> cartItems = cart.getItem();
+
+		        for (Item item : cartItems) {
+		            deleteItem(item);
+		        }
+		    }
+		
+	}
+
+	@Override
+	public Item getCartItemByItemId(int itemId) {
+	        Session session = sessionFactory.openSession();
+	        Query query = session.createQuery("from CartItem where itemId = ?");
+	        query.setInteger(0, itemId);
+	        session.flush();
+	        return (Item) query.uniqueResult();
+	    }
+
+	}
+	

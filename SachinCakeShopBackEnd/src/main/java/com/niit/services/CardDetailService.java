@@ -10,10 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.webflow.execution.RequestContext;
 
-import com.ecom.dao.CardDetailDAO;
-import com.ecom.models.CardDetails;
-
-
+import com.niit.dao.CardDetailDAO;
+import com.niit.models.CardDetails;
 
 @Service
 public class CardDetailService implements Serializable {
@@ -25,6 +23,7 @@ public class CardDetailService implements Serializable {
     	HttpServletRequest request = (HttpServletRequest )context.getExternalContext().getNativeRequest();  
     	
     	cardDetailDao.addCardDetail(cardDetail, request.getUserPrincipal());
+    	
     	
     	return "success";
     }

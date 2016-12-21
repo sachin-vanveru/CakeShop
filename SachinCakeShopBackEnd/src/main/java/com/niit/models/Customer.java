@@ -41,6 +41,27 @@ public class Customer  implements Serializable {
 	@Column(name="Address")
 	@NotBlank
 	String address;
+	@OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="shipId")
+    private ShippingAddress shippingAddress;
+
+    public ShippingAddress getShippingAddress() {
+		return shippingAddress;
+	}
+	public void setShippingAddress(ShippingAddress shippingAddress) {
+		this.shippingAddress = shippingAddress;
+	}
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+	@OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "cartId")
+    @JsonIgnore
+    private Cart cart;
+
 	public int getCustId() {
 		return custId;
 	}

@@ -35,7 +35,13 @@ public class Item implements Serializable {
   @JsonIgnore
   private Cart cart;
   
-  private double totalPrice;
+  public Cart getCart() {
+	return cart;
+}
+public void setCart(Cart cart) {
+	this.cart = cart;
+}
+private double totalPrice;
   
   
   public double getTotalPrice() {

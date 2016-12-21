@@ -1,13 +1,12 @@
 <flow xmlns="http://www.springframework.org/schema/webflow"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow
-                          http://www.springframework.org/schema/webflow/spring-webflow.xsd">
- 
-             
-  <var name="ship" class="com.ecom.models.ShippingAddress" />  
-   <var name="pay" class="com.ecom.models.CardDetails" />  
-   <var name="saveShip" class="com.ecom.services.ShippingServices" />
-   <var name="saveCardData" class="com.ecom.services.CardDetailService" />
+                          http://www.springframework.org/schema/webflow/spring-webflow.xsd">             
+  <var name="ship" class="com.niit.models.ShippingAddress" />  
+   <var name="pay" class="com.niit.models.CardDetails" />  
+   <var name="saveShip" class="com.niit.services.ShippingServices" />
+   <var name="saveCardData" class="com.niit.services.CardDetailService" />
+
 <view-state id="memberShip" view="cartPage">
 <transition on="checkout" to="shippingPage" ></transition>
 
@@ -38,8 +37,5 @@
 
 <end-state id="index" view="index" ></end-state>
 <end-state id="order" view="Order"></end-state>
-	
-
-
 	
  </flow>

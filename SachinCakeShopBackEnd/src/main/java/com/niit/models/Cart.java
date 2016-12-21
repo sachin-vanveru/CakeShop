@@ -34,8 +34,8 @@ public void setCartId(int cartId) {
 }
 
 @Column(name="ListOfItem")
-@OneToMany(mappedBy="Cart",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-private List<Item>item;
+@OneToMany(mappedBy="cart",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+private List<Item> item;
 public List<Item> getItem() {
 	return item;
 }

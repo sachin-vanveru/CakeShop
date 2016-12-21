@@ -22,7 +22,7 @@
 </head>
 <body style="background-color: #ffdd99">
 <div class="container">
-<%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@ include file="/WEB-INF/views/Template/Header.jsp" %>
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit" >
 <form:input style="visibility:hidden;" path="pid" />
 <form:input style="visibility:hidden;" path="image" />

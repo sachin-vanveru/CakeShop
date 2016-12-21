@@ -12,18 +12,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="<c:url value='/resources/js/AngularjsController.js'/>"></script>
+  <script src="<c:url value='/resources/js/AngularProductController.js'/>"></script>
 </head>
 <body style="background-color: #ffdd99">
 
 <div class="container">
-<%@ include file="/WEB-INF/views/Resource/Header.jsp"  %>
+<%@ include file="/WEB-INF/views/Template/Header.jsp"  %>
 <div> 
 <center>
 					<h3>Items in your cart</h3>
 </center>
 </div>
-<div  ng-app="myApp">
+<div  ng-app="myapp">
 	 
 	 <div  ng-controller = "myCtrl" ng-init="retrieveCart()">
         <table class="table table-bordered table-striped fs13" >

@@ -20,7 +20,7 @@
 </head>
 <body style="background-color: #ffdd99">
   <div class="container">
-<%@ include file="/WEB-INF/views/Resource/Header.jsp" %>
+<%@ include file="/WEB-INF/views/Template/Header.jsp" %>
 
 <c:if test="${error=='true'}">
 
@@ -44,9 +44,9 @@
     <label for="password">Password:</label>
     <input type="password" id="password" class="form-control" name="password" />
   </div>
-  		  <input type="hidden" name="${_csrf.parameterName}"
+ <!-- 		  <input type="hidden" name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
-  
+  -->
   <button type="submit"  class="btn btn-default" >Submit</button>
 </form>
 <h4>Not A User ? <a href="Register">Sign Up Here</a></h4>

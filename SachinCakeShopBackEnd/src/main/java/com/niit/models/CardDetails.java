@@ -63,7 +63,7 @@ public class CardDetails  implements Serializable {
     private Cart cart;
     
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "custId")
     @JsonIgnore
     private Customer usersDetail;
     

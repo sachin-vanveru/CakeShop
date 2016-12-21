@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;;
 public class ProductServices {
 
 	@Autowired
-	ProductDaoImple productdao=new ProductDaoImple();
+	ProductDao productdao=new ProductDaoImple();
 	
 	public List<Product>getAllProduct()
 	{

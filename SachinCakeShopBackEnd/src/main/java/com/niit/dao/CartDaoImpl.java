@@ -1,5 +1,7 @@
 package com.niit.dao;
 
+import java.io.IOException;
+
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;
@@ -45,6 +47,12 @@ public class CartDaoImpl implements CartDao {
 		session.flush();
 		session.close();
 				
+	}
+	
+	public Cart getCartById(int cartId) {
+		Session session = sessionFactory.openSession();
+        return (Cart) session.get(Cart.class, cartId);
+    
 	}
 
 }

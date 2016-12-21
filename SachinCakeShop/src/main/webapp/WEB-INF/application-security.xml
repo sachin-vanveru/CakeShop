@@ -25,9 +25,9 @@
    login-page="/login" 
    default-target-url="/welcome" 
    authentication-failure-url="/fail2login" />   
-  <security:logout  logout-success-url="/logout" />
+  <security:logout logout-url="/logout1" logout-success-url="/logout" />
    
-   <security:csrf/>
+   <security:csrf disabled="true"/>
   </security:http>
 
     <security:authentication-manager>
