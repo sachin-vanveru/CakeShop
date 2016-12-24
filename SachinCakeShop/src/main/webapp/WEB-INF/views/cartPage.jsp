@@ -23,9 +23,9 @@
 					<h3>Items in your cart</h3>
 </center>
 </div>
-<div  ng-app="myapp">
+<div  ng-app="myapp"  ng-controller = "myCtrl" ng-init="retrieveCart()" >
 	 
-	 <div  ng-controller = "myCtrl" ng-init="retrieveCart()">
+	 <div >
         <table class="table table-bordered table-striped fs13" >
 		  <thead>
 			  <tr>
@@ -39,13 +39,13 @@
 			  </tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat = "items in cart.cartItems">
-					 	<td class="span1"><img height="60px" width="60px" src="<c:url value="/resources/Images/{{items.item.category}}/{{items.item.image}}" /> " alt="image"/></td>
-						<td>{{items.item.name}}</td>
-						<td>{{items.item.price}}</td>
-						<td>{{items.quantity}}</td>
+				<tr ng-repeat = "items in cart.item">
+					 	<td class="span1"><img height="60px" width="60px" src="<c:url value="/resources/image/{{items.product.category}}/{{items.product.image}}" /> " alt="image"/></td>
+						<td>{{items.product.name}}</td>
+						<td>{{items.product.price}}</td>
+						<td>{{items.qunitity}}</td>
 						<td>{{items.totalPrice}}</td>
-						<td><a href="#" class="btn btn-danger btnAction" ng-click="removeItemFromCart(items.item.pid)">
+						<td><a href="#" class="btn btn-danger btnAction" ng-click="removeItemFromCart(items.itemId)">
 							<span class="glyphicon glyphicon-remove"></span>remove</a></td>
 					</tr>
 			  <tr>

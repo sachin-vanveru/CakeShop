@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name="ITEM")
 public class Item implements Serializable {
     @Id
-	@Column(name="ItedId")
+	@Column(name="ItemId")
     @SequenceGenerator(sequenceName="item_seq",name="item_seq")
     @GeneratedValue(strategy=GenerationType.AUTO,generator="item_seq")
     private int itemId;
@@ -27,7 +27,7 @@ public class Item implements Serializable {
   private int qunitity;
   
   @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "itemId")
+  @JoinColumn(name = "PID")
   private Product product;
   
   @ManyToOne(fetch = FetchType.EAGER)

@@ -1,5 +1,7 @@
 package com.niit.dao;
 
+import java.io.Serializable;
+
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;
@@ -10,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.niit.models.Order;
 
 @Repository
-public class OrderDaoImpl implements OrderDao {
+public class OrderDaoImpl implements OrderDao,Serializable {
 
 	@Autowired
 	SessionFactory sessionFactory;
@@ -18,7 +20,8 @@ public class OrderDaoImpl implements OrderDao {
 	@Transactional
 	public void addOrder(Order o) {
 		Session session=sessionFactory.openSession();
-		session.save(o);
+		session.saveOrUpdate(o);
+		session.flush();
 		session.close();
 		
 		

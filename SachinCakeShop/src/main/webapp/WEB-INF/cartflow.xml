@@ -2,17 +2,14 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow
                           http://www.springframework.org/schema/webflow/spring-webflow.xsd">             
-  <var name="ship" class="com.niit.models.ShippingAddress" />  
+ <var name="ship" class="com.niit.models.ShippingAddress" />
    <var name="pay" class="com.niit.models.CardDetails" />  
-   <var name="saveShip" class="com.niit.services.ShippingServices" />
-   <var name="saveCardData" class="com.niit.services.CardDetailService" />
-
+  <var name="saveShip" class="com.niit.services.ShippingServices" />
+   <var name="saveCardData" class="com.niit.services.CardDetailService" /> 
 <view-state id="memberShip" view="cartPage">
 <transition on="checkout" to="shippingPage" ></transition>
-
 </view-state>
-  
-<view-state id="shippingPage" view="shipping" model="ship">
+ <view-state id="shippingPage" view="shipping" model="ship">
 <transition on="payment" to="saveShipDetails"></transition>
 </view-state>
 
@@ -21,7 +18,7 @@
 <transition on="success" to="paymentPage"></transition>
 </action-state>
 
-<view-state id="paymentPage" view="payment" model="pay">
+<view-state id="paymentPage" view="Payment" model="pay">
 <transition on="paynow" to="saveCard" ></transition>
 </view-state>
 
@@ -29,7 +26,7 @@
 <evaluate expression="saveCardData.addCardDetail(pay,flowRequestContext)"></evaluate>
 <transition on="success" to="order"></transition>
 <transition on="error" to="paymentPage"></transition>
-</action-state>
+</action-state>	
 
 
 

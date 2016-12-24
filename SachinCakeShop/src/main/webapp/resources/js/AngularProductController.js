@@ -5,12 +5,10 @@ app.controller('myCtrl',function($scope,$http) {
 	.then(function(response){
 		$scope.data=response.data;
 	});
-	
 	$scope.sort=function(keyname){
 		$scope.sortKey=keyname;
 		$scope.reverse=!$scope.reverse;
 	}
-	
 	$scope.loadData = function (){
 		$http.get("data").then(function(response) {
         $scope.Data = response.data;
@@ -40,9 +38,8 @@ $scope.removeItemFromCart = function (itemId) {
 };
 $scope.GrandTotalOfItems = function () {
     var grandTotal=0;
-
-    for (var i=0; i<$scope.cart.cartItems.length; i++) {
-        grandTotal+=$scope.cart.cartItems[i].totalPrice;
+    for (var i=0; i<$scope.cart.item.length; i++) {
+        grandTotal+=$scope.cart.item[i].totalPrice;
    }
 
     return grandTotal;
@@ -61,6 +58,5 @@ $scope.clearCartItems = function () {
 };
 $scope.retrieveCart = function () {
     $scope.refreshCartItems();
-};
-	
+};	
 });

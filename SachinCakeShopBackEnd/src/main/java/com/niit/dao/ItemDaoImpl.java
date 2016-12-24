@@ -41,6 +41,7 @@ public class ItemDaoImpl implements ItemDao {
 	@Override
 	@Transactional
 	public void deleteItem(Item i) {
+		System.out.println("del.......");
 		Session session= sessionFactory.openSession();
 		if(i!=null)
 		{
@@ -76,10 +77,11 @@ public class ItemDaoImpl implements ItemDao {
 	@Override
 	public Item getCartItemByItemId(int itemId) {
 	        Session session = sessionFactory.openSession();
-	        Query query = session.createQuery("from CartItem where itemId = ?");
-	        query.setInteger(0, itemId);
-	        session.flush();
-	        return (Item) query.uniqueResult();
+	        Item item =(Item)session.get(Item.class, itemId);
+	        System.out.println(item);
+	    //    System.out.println("retriving product...."+item.getProduct().getName());
+	        session.close();
+	        return item;
 	    }
 
 	}

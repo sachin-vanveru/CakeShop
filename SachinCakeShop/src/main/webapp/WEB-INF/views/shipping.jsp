@@ -29,7 +29,58 @@
 				<form:input path="houseNumber"  class="form-control" />
 				<form:errors path="houseNumber" cssStyle="color: #ff0000"/>
    </div>
-   </form:form>
- </div>
+   <div class="form-group">
+				<label for="add1">Address Line 1</label>
+
+				<form:input path="addressLine1" class="form-control" />
+				<form:errors path="addressLine1" cssStyle="color: #ff0000"/>
+			</div>
+			<div class="form-group">
+				<label>Address Line 2</label>
+
+				<form:input path="addressLine2" class="form-control" />
+
+			</div>
+
+
+			<div class="form-group">
+				<label >City</label>
+
+				<form:input path="city"  class="form-control" />
+				<form:errors path="city" cssStyle="color: #ff0000"/>
+			</div>
+
+			<div class="form-group">
+				<label >State</label>
+
+				<form:input path="state"  class="form-control" />
+				<form:errors path="state" cssStyle="color: #ff0000"/>
+			</div>
+
+			<div class="form-group">
+				<label >Country</label>
+
+				<form:input path="country"  class="form-control" />
+				<form:errors path="country" cssStyle="color: #ff0000"/>
+
+			</div>
+			<div class="form-group">
+				<label >Zipcode</label>
+
+				<form:input path="zipCode"  class="form-control" />
+				<form:errors path="zipCode" cssStyle="color: #ff0000"/>
+			</div>
+
+			<div>
+									<input type="hidden" name="_flowExecutionKey" /> <input
+						type="submit" value="Proceed to Payment" class="btn btn-primary"
+						name="_eventId_payment" />
+				
+			</div>
+		</form:form>
+
+	</div>
+
 </body>
 </html>
+Contact GitHub 

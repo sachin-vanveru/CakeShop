@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.niit.models.CardDetails;
 import com.niit.models.Customer;
 import com.niit.models.Order;
+import com.niit.models.User;
 
 
 
@@ -25,9 +26,10 @@ public class CardDetailDAO implements Serializable {
 	        Session session = sessionFactory.openSession();
 	        Transaction tx = session.beginTransaction();
 	       System.out.println("checkingout...");
-	        Query query = session.createQuery("from Customer where username = ?");
+	        Query query = session.createQuery("from User where userName = ?");
 	        query.setString(0, p.getName());
-	        Customer c= (Customer) query.uniqueResult();
+	        User u= (User) query.uniqueResult();
+	        Customer c= u.getCust();
 	        cardDetail.setUsersDetail(c);
 	        cardDetail.setCart(c.getCart());
 	        session.saveOrUpdate(cardDetail);

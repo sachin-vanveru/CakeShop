@@ -1,9 +1,7 @@
 package com.niit.services;
-
 import java.io.Serializable;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.webflow.execution.RequestContext;
@@ -12,7 +10,7 @@ import com.niit.dao.ShippingDao;
 import com.niit.models.ShippingAddress;
 
 @Service
-public class ShippingServices  {
+public class ShippingServices  implements Serializable {
 	
 	@Autowired
 	private ShippingDao shipDAO ;

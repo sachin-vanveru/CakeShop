@@ -12,10 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="<c:url value='/resources/js/AngularjsController.js'/>"></script>
+  <script src="<c:url value='/resources/js/AngularProductController.js'/>"></script>
 </head>
 <body style="background-color: #ffdd99">
-<div class="container"   ng-app="myApp" ng-controller = "myCtrl" ng-init="retrieveCart()" >
+<div class="container"   ng-app="myapp" ng-controller = "myCtrl" ng-init="retrieveCart()" >
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
 <h3>Payment Details </h3>
 <form:form role="form" method="post" modelAttribute="pay">

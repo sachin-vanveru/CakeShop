@@ -9,22 +9,39 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="background:#ffdd99">
-<footer class="section" style="background:#ffdd99" >
- <div class="container">
-     <div class="row" >
-     	<div class="col-sm-6">
-     	   <span class="copyright text-inverse"> Copyright @ All things Cake Inc. 2016 </span>
-     	</div>
-     	<div class="col-sm-6">
-     	   <a><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-     	   <a><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-     	   <a><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-     	</div>
-     </div>
- </div>
 
-</footer>
+
+<footer class="section" style="background:#ff0055;">
+  
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<span class="copyright text-inverse">Copyright © Megapixel Inc. 2016</span>
+</div>
+  <div class="col-sm-6">
+     <div class="row">
+
+        <div class="col-md-12 hidden-xs text-right">
+                <a href="#"><i style="color:#ffe6e6;" class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+
+		<a href="#"><i style="color:#ffe6e6;" class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+		<a href="#"><i style="color:#ffe6e6;" class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+
+                            </div>
+
+                        </div>
+    
+                </div>
+  
+              </div>
+
+            </div>
+  
+      </footer>
+
 </body>
 </html>

@@ -1,4 +1,5 @@
 package com.niit.dao;
+import java.io.Serializable;
 import java.security.Principal;
 
 import javax.transaction.Transactional;
@@ -13,13 +14,15 @@ import com.niit.models.Customer;
 import com.niit.models.ShippingAddress;
 import com.niit.models.User;
 
+
 @Repository
-public class ShippingDaoImpl implements ShippingDao {
+public class ShippingDaoImpl implements ShippingDao,Serializable {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Transactional
+	@Override
 	public void addShippingAddress(ShippingAddress add, Principal p)
 	{
 	  Session	session =sessionFactory.openSession();

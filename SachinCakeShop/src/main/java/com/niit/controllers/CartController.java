@@ -35,8 +35,9 @@ public class CartController {
     private ProductServices itemService;
     @RequestMapping("/refreshCart")
     public Cart getCartById (Principal principal) {
+    	System.out.println("refreshing cart");
     	Customer usersDetail = usersDetailService.getUserByUsername(principal.getName());
-    	System.out.println("cart id:"+ usersDetail.getCustName());
+    	System.out.println("cart id:"+ usersDetail.getCustName()+" "+usersDetail.getCart().getCartId());
         Cart cart = usersDetail.getCart();
         return cart;
     }
@@ -87,6 +88,7 @@ public class CartController {
     public void removeItem (@PathVariable("itemId") int itemId) {
     	System.out.println("Deleting item Id: "+itemId);
         Item cartItem =cartItemService.getCartItemByItemId(itemId);
+        System.out.println(cartItem.getProduct().getName());
         cartItemService.removeCartItem(cartItem);
 
     }
