@@ -35,7 +35,7 @@
 					  <label >Card Number</label>
 						
 						
-						<form:input path="cardNumber" id="name" class="form-control"/>
+						<form:input path="cardNumber"  class="form-control"/>
 						<form:errors path="cardNumber" cssStyle="color: #ff0000"/>
 						</div>
 						
@@ -59,7 +59,7 @@
     						<form:option value="11" label="11" />
     						<form:option value="12" label="12" />
 							</form:select>
-						<form:errors path="expiryMonth" cssStyle="color: #ff0000"/>	
+						<form:errors path="expiryYear" cssStyle="color: #ff0000"/>	
 							</div>
 							<div class="col-sm-6">
 							

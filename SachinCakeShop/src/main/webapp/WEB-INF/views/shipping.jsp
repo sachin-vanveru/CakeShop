@@ -22,6 +22,7 @@
  <div class="container">
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %> 
 <h3>Shipping Details</h3>
+
    <form:form modelAttribute="ship" role="form">
    <div class="form-group">
       
@@ -79,7 +80,8 @@
 			</div>
 		</form:form>
 
-	</div>
+     </div>
+	
 
 </body>
 </html>

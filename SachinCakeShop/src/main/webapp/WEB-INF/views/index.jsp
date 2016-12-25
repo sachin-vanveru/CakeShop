@@ -69,9 +69,34 @@
   </div>
   <br>
   </div>
-  <div style="width:100px" class="container"><iframe width="560" height="315" src="https://www.youtube.com/embed/eE-zAcJusWU" frameborder="0" allowfullscreen></iframe>
+  <div style="width:75px" class="container"><iframe width="560" height="315" src="https://www.youtube.com/embed/eE-zAcJusWU" frameborder="0" allowfullscreen></iframe>
   </div>
-<br>
+<br><br>
+  <div style="height: 30px;"></div>
+    <div class="row">
+       <div class="col-sm-4">
+         <a href="view_All?id=1">
+           <img height="200px" width="200px" alt="BirthdayCake" src="<c:url value='/resources/image/Vanilla-Birthday-Cake.jpg' />" />
+         </a>
+         <br>
+         <h3>Birthday Cake</h3>
+       </div>
+       <div class="col-sm-4">
+         <a href="view_All?id=2">
+           <img height="200px" width="200px" alt="Anniversary Cake" src="<c:url value='/resources/image/ann5.jpg'/>" />
+         </a>
+         <br>
+         <h3>Anniversary Cake</h3>
+       </div>   
+       <div class="col-sm-4">
+         <a href="view_All?id=3">
+         <img height="200px" width="200px" alt="Special Events" src="<c:url value="/resources/image/SE.jpg" />" />
+         </a>
+         <br>
+         <h3>Special Event Cake</h3>
+       </div>
+    </div>
+
 <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
   

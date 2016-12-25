@@ -14,7 +14,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ORDER")
+@Table(name="ORDERS")
 public class Order implements Serializable {
   
 	@Id

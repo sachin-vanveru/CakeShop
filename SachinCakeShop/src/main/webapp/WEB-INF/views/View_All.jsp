@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false" %>
 <!DOCTYPE html PUBLIC1 "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,15 +23,32 @@
  ${msg}
  <br/>
  </span>
+    <c:set var="pid" value="${param.id}"></c:set>
+	<c:if test="${!(pid<=3)}" >
+		<c:set var="pid" value="4" />
+	</c:if>
 <table style="width: 100%;" class="table">
 <tr>
-<th ng-click="sort('pid')"><button class="btn btn-primary">Product Id</button> </th>
+<th ng-click="sort('pid')">Product Id </th>
 <th ng-click="sort('image')">Product </th>
 <th ng-click="sort('name')">Cake name </th>
 <th ng-click="sort('price')">price</th>
-<th>choose</th>
+<th></th>
 </tr>
-<tr ng-repeat="product in data|filter:query|orderBy:sortKey:reverse">
+	<c:if test="${pid==1}" >
+	<tr ng-repeat="product in data|filter:{category:'Birthday'}|filter:query|orderBy:sortKey:reverse" >
+	</c:if>
+	
+	<c:if test="${pid==2}" >
+	<tr ng-repeat="product in data|filter:{category:'Anniversary'}|filter:query|orderBy:sortKey:reverse" >
+	</c:if>
+	
+	<c:if test="${pid==3}" >
+	<tr ng-repeat="product in data|filter:{category:'SpecialEvents'}|filter:query|orderBy:sortKey:reverse" >
+	</c:if>
+	<c:if test="${pid==4}" >
+		<tr ng-repeat="product in data|filter:query|orderBy:sortKey:reverse">
+	</c:if>
    <td>{{product.pid}} </td>
    <td ><img src="<c:url value='/resources/image/{{product.category}}/{{product.image}}' />"
     alt="no images" width="100" height="100" /></td>
@@ -46,7 +62,10 @@
    
    </tr>
    </table>
+      
 </div>
+
+
 
  <a class="btn btn-block btn-social btn-twitter">
     <span class="fa fa-twitter"></span> Sign in with Twitter
