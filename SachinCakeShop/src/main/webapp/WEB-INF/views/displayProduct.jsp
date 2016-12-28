@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>DisplayCake</title>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -20,12 +20,23 @@
 
     <table style="align:'center'" class="table">
      <tr>
-         <td> <img src="<c:url value='/resources/image/${product.category}/${product.image}' />" alt="no images" width="300" height="300" /></td>
-          
-          <td  ng-controller="myCtrl"  ><security:authorize access="isAuthenticated()" >
+         <td> <img src="<c:url value='/resources/image/${product.category}/${product.image}' />" alt="no images" width="500" height="500" /> </td>
+			<td>
+			<ul>
+				<li><h4 style="font-family:cursive;color:red;"> Product Id:</h4>  ${product.pid}</li>
+				<li><h4 style="font-family:cursive;color:red;"> Product name:</h4>  ${product.name}</li>
+				<li><h4 style="font-family:cursive;color:red;">Product Description :</h4>  ${product.desc}</li>
+				<li><h4 style="font-family:cursive;color:red;"> product quantity:</h4>  ${product.qty}</li>
+				<li><h4 style="font-family:cursive;color:red;"> Product Category:</h4> ${product.category}</li>
+				<li><h4 style="font-family:cursive;color:red;"> Product Price:</h4> ${product.price}</li>
+			</ul>
+			</td>         
+         <td  ng-controller="myCtrl"  ><security:authorize access="isAuthenticated()" >
               
-              <a class="btn btn_primary" ng-click="addItemToCart('${product.pid}')" >
-               <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>       
+              <a  ng-click="addItemToCart('${product.pid}')" ><button class="btn btn_primary">
+                  <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+               </button>
+               </a>       
               
           </security:authorize>
             <security:authorize access="isAnonymous()">
@@ -34,19 +45,9 @@
             </a>
             </security:authorize>
            </td>
-          </tr>
-     
-  <tr><td>product Id:  ${product.pid} </td>
-</tr>
-<tr>
-<td>Product name: ${product.name} </td>
-</tr>
-<tr><td>Product Description : ${product.desc}</td></tr>
-<tr><td>Price ${product.price}</td> </tr>
-<tr><td>quantity ${product.qty}</td></tr>
+    </tr>
 </table>
-</div>
-
-					
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
+</div>				
 </body>
 </html>

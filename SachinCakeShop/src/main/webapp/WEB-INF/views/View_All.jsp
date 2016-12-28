@@ -9,13 +9,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="<c:url value='/resources/js/AngularProductController.js' />"></script>
 </head>
-<body ng-app="myapp" style="background-color: #ffdd99">
+<body ng-app="myapp" style="background-color: #ffdd99;">
 <div class="container" >
 <%@include file="/WEB-INF/views/Template/Header.jsp" %>
 
 <Div class="container">
 <div ng-controller="myCtrl"  class="container">
-<div >
+<div>
  <input  type="text" id="query" ng-model="query" />
  <button class="default"><span class="glyphicon glyphicon-search"> </span></button>
  </div>
@@ -64,16 +64,8 @@
    </table>
       
 </div>
-
-
-
- <a class="btn btn-block btn-social btn-twitter">
-    <span class="fa fa-twitter"></span> Sign in with Twitter
-  </a>
-   <a class="btn btn-block btn-social btn-facebook">
-    <span class="fa fa-twitter"></span> Sign in with facebook
-  </a>  
-  </div>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
+</div>
 </div>
 </div>
 </body>

@@ -28,6 +28,7 @@
 	<a href="<c:url value="disp?id=4" />" class="btn btn-primary">Cancel</a>
  </div>
  </div>
+ <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 </body>
 </html>

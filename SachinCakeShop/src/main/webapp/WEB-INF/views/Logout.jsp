@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Logout</title>
 </head>
 <body style="background-color: #ffdd99">
 <div class="container" >
 <%@include file="/WEB-INF/views/Template/Header.jsp" %>
-
+<h4 style="font-style: italic;color: navy;"></h4>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 </body>
 </html>

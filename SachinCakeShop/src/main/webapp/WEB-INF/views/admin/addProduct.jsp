@@ -28,7 +28,7 @@
  				<form:label  path="name">
 						<spring:message text="Product Name"/>
 				</form:label>
-				<form:input  class="form-control" path="name" />
+				<form:input style="20%;" class="form-control" path="name" />
 				<form:errors path="name" >
 						<p class="errStyle">
 								* Product Name should be atleast 3 characters
@@ -98,6 +98,7 @@
  							
  	</div>
 </form:form>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 </body>
 </html>

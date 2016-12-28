@@ -24,7 +24,7 @@ h4   {color: white;}
 <tr>
 <td>
 <center>
-<h2 style="color:red">Sachin Cake Shop </h2>
+<h2 style="color:red"> Cake Shop </h2>
 <h4>Phone no-9029251878</h4>
 <h4>Email address:- sachinvanveru55@gmail.com</h4>
 <h4>address:Monginis Cake Shop 9, Plot No. 6a,<br> Panchratna Bldg., Navi Mumbai, Sector 1,<br> Kalamboli, New Panvel, Navi Mumbai, Maharashtra 400218 </h4>
@@ -40,6 +40,7 @@ h4   {color: white;}
 
 </tr>
  </table >
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
  </div>
 </body>
 </html>

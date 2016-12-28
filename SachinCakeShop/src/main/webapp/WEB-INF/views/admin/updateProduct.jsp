@@ -105,7 +105,7 @@
  </div>
 
 </form:form>
-
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 
 

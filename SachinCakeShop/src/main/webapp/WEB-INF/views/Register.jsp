@@ -20,27 +20,33 @@
 </style>
 </head>
 <body style="background-color: #ffdd99">
-
 <div class="container">
 
+
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
+
 <p>
 ${success}
 </p>
-<form:form  role="form" action="Register" modelAttribute="user">
+<div class="container">
+<div class="col-sm-6">
+<img style="height:auto;width: 50%;" alt="welcome" src="<c:url value='/resources/image/animated-cake1.gif'/>" />
+</div>
 
- <div class="col-sm-5">
+<div class="col-sm-6">
+<form:form role="form" action="Register" modelAttribute="user">
+
+ 
   <div class="form-group">
  	<form:label  path="cust.custName">
 				<spring:message text="Enter Full Name"/>
 	</form:label>
-	<form:input class="form-control" path="cust.custName" />
+	<form:input  class="form-control" path="cust.custName" />
 		<form:errors path="cust.custName" >
 			<p class="errStyle">
 					* Invalid Customer name
 </p>
- </form:errors>
-   
+ </form:errors></div>
   <div class="form-group">
  	<form:label  path="userName">
 				<spring:message text="User Name"/>
@@ -89,7 +95,7 @@ ${success}
 
   <div class="form-group">
  	<form:label  path="cust.address">
-				<spring:message text="Aaddress"/>
+				<spring:message text="Address"/>
 	</form:label>
 	<form:input class="form-control" path="cust.address" />
 		<form:errors path="cust.address" >
@@ -103,6 +109,7 @@ ${success}
 </form:form>
 </div>
 </div>
-
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
+</div>
 </body>
 </html>

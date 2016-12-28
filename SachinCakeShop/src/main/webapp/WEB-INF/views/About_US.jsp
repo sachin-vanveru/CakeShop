@@ -23,10 +23,10 @@
 <Div class="continer">
 <div class="container">
 <%@include file="/WEB-INF/views/Template/Header.jsp" %>
-<h1 Style="color:graytext; " align="center" >About Us</h1>
+<h1 Style="color:red ;font-style:italic;" align="center" >About Us</h1>
 
 <p style="color:black">
-Sachin Cake shop is a premium cake shop in Coimbatore and Trichy. We opened in 2012, 
+All Thing Cake shop is a premium cake shop in Coimbatore and Trichy. We opened in 2012, 
 when Trichy was grappling with a lack of choice for quality cakes. </p>
 <p style="color:black">
 After months of meticulous baking, CakeBee headed every must visit list of cafes in Trichy. The Hindu called CakeBee as the “Hip new cafe on a roll”. 
@@ -51,7 +51,7 @@ Problems like non-functional website, lack of response and long delivery wait ti
 </table>
 </marquee>
 </div>
-
-</Div>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
+ </Div>
 </body>
 </html>

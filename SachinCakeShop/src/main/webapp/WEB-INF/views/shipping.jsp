@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ShippingDetails</title>
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script
@@ -79,7 +79,7 @@
 				
 			</div>
 		</form:form>
-
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
      </div>
 	
 

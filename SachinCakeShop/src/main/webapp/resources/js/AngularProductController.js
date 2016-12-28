@@ -20,9 +20,9 @@ app.controller('myCtrl',function($scope,$http) {
 		});
 	};
 $scope.addItemToCart =function (itemId) {
-		alert("adding....."+itemId);
+		
 		$http.put("addItem/"+itemId).success(function () {
-				alert("Item added to the cart!");
+				alert("Item added to the cart! check on view cart");
 		}).error(function(){
 				alert("Error");
 		});

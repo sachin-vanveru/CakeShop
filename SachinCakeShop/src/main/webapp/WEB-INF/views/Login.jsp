@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Log In</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -27,22 +27,21 @@
   <div class="errorblock">
    Your login attempt was not successful, try again.
  
-  </div>
+  </div>	
  </c:if>
  <c:if test="${not empty logoutmsg }">
    <div class="logoutblock">
    <c:out value="${logoutmsg}" />
    </div>
  </c:if>
- 
 <form role="form" action="<c:url value='login' />" method="post" >
   <div class="form-group">	
     <label for="username">UserName:</label>
-    <input type="text" id="username" name="username"  class="form-control" />
+    <input style="width: 20%;" type="text" id="username" name="username"  class="form-control" />
   </div>
   <div class="form-group">
     <label for="password">Password:</label>
-    <input type="password" id="password" class="form-control" name="password" />
+    <input style="width: 20%;" type="password" id="password" class="form-control" name="password" />
   </div>
  <!-- 		  <input type="hidden" name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
@@ -50,6 +49,7 @@
   <button type="submit"  class="btn btn-default" >Submit</button>
 </form>
 <h4>Not A User ? <a href="Register">Sign Up Here</a></h4>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 </body>
 </html>
