@@ -41,12 +41,12 @@ Problems like non-functional website, lack of response and long delivery wait ti
 <marquee>
 <table class="table">
 <tr>
-<td><img src="resources/image/hd1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
-<td><img src="resources/image/hd2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
-<td><img src="resources/image/hd3.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
-<td><img src="resources/image/birthday1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
-<td><img src="resources/image/birthday2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
-<td><img src="resources/image/ann3.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></td>
+<td><a href="view_All?id=1"><img src="resources/image/hd1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></a>  </td>
+<td><a href="view_All?id=3"><img src="resources/image/hd2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></a> </td>
+<td> <a href="view_All?id=3"><img src="resources/image/hd3.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></a> </td>
+<td> <a href="view_All?id=3"><img src="resources/image/birthday1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></a> </td>
+<td> <a href="view_All?id=3"><img src="resources/image/birthday2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></a> </td>
+<td> <a href="view_All?id=2"> <img src="resources/image/ann3.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> </a></td>
 </tr>
 </table>
 </marquee>

@@ -16,7 +16,7 @@
 <Div class="container">
 <div ng-controller="myCtrl"  class="container">
 <div>
- <input  type="text" id="query" ng-model="query" />
+ <input type="text" id="query" ng-model="query" />
  <button class="default"><span class="glyphicon glyphicon-search"> </span></button>
  </div>
  <span>
@@ -29,10 +29,10 @@
 	</c:if>
 <table style="width: 100%;" class="table">
 <tr>
-<th ng-click="sort('pid')">Product Id </th>
-<th ng-click="sort('image')">Product </th>
-<th ng-click="sort('name')">Cake name </th>
-<th ng-click="sort('price')">price</th>
+<th ng-click="sort('pid')"><a style="color: red;" href="#"> <span class="glyphicon glyphicon-chevron-down"> Product Id</span></a> </th>
+<th ng-click="sort('image')"> <a style="color: red;" href="#">  <span class="glyphicon glyphicon-chevron-down">  Product</span></a>  </th>
+<th ng-click="sort('name')"> <a style="color: red;" href="#"> <span class="glyphicon glyphicon-chevron-down">  Cake name</span></a>  </th>
+<th ng-click="sort('price')"> <a style="color:red;" href="#"> <span class="glyphicon glyphicon-chevron-down"> price</span></a>  </th>
 <th></th>
 </tr>
 	<c:if test="${pid==1}" >

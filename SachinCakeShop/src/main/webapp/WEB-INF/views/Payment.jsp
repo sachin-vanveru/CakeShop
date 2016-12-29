@@ -17,7 +17,8 @@
 <body style="background-color: #ffdd99">
 <div class="container"   ng-app="myapp" ng-controller = "myCtrl" ng-init="retrieveCart()" >
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
-<h3>Payment Details </h3>
+<h3 align="center">Payment Details </h3>
+<div style="width: 40%;" class="container"> 
 <form:form role="form" method="post" modelAttribute="pay">
   <div class="form-group">
 					  <label>Card Type</label>
@@ -130,6 +131,7 @@
         
         
         </form:form>
+        </div>
         <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 

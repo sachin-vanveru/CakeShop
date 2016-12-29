@@ -23,6 +23,7 @@
 <body style="background-color: #ffdd99">
 <div class="container">
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
+<div style="width: 50%; class="container">
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit" >
 <form:input style="visibility:hidden;" path="pid" />
 <form:input style="visibility:hidden;" path="image" />
@@ -105,6 +106,7 @@
  </div>
 
 </form:form>
+</div>
 <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 

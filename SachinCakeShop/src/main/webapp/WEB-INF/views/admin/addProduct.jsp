@@ -23,6 +23,7 @@
 <body style="background-color: #ffdd99">
 <div class="container" >
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
+<div style="width: 50%; class="container">
 <form:form role="form"  action="add" modelAttribute="product" enctype="multipart/form-data"> 
  	<div class="form-group">
  				<form:label  path="name">
@@ -98,6 +99,7 @@
  							
  	</div>
 </form:form>
+</div>
 <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 </body>

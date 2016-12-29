@@ -21,9 +21,9 @@
 <body style="background-color: #ffdd99">
  <div class="container">
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %> 
-<h3>Shipping Details</h3>
-
-   <form:form modelAttribute="ship" role="form">
+<h3 align="center">Shipping Details</h3>
+	<div style="width: 40%;" class="container">
+<form:form modelAttribute="ship" role="form">
    <div class="form-group">
       
 				<label for="houseNumber">House Number</label>
@@ -79,6 +79,8 @@
 				
 			</div>
 		</form:form>
+</div>
+
 <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
      </div>
 	

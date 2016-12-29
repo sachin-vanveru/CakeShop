@@ -17,7 +17,20 @@
       margin: auto;
      height: 400px;
       
+  .marquee {
+  position: relative;
+  animation: marquee 2s linear infinite;
+  text-align:center;
+  color:#ffffff;
+}
+@keyframes marquee {
+  0% {
+    top: 10em
   }
+  100% {
+    top: -2em
+  }
+}
   </style>
 </head>
 
@@ -70,11 +83,13 @@
   <br>
   </div>
   <div class="container">
-  <div style="border-top-width: 35in;" class="col-sm-6">
- <p style="font-family:cursive;color:red;font-size: medium;">
+  <div style="border-bottom-color: black;" class="col-sm-6">
+  <marquee behavior="scroll" direction="up">
+
+ <p class="marquee" style="font-family:cursive;color:red;font-size: medium;">
  	Barbie Dolls have been around for a lot of time now, it is said that a girl<br>
  	will never forget her first Barbie doll, No matter how old she get.</p>
- 	<p style="font-family:cursive;color:red;font-size: medium;"> We use cake to celebrate happy occasions and make a memorable movement.<br>
+ 	<p class="marquee" style="font-family:cursive;color:red;font-size: medium;"> We use cake to celebrate happy occasions and make a memorable movement.<br>
  	 Everyone like cake because of its different flavor which make is very testy.  </p>
  	 <p style="font-family:cursive;color:red;font-size: medium;">
  	      There are different flavors of cake. You can order any cake according to<br>
@@ -82,6 +97,7 @@
  	       but size of the cake does not matter main thing is taste of the cake because<br> 
  	       everyone like tasty cake.
  	  </p>
+ 	  </marquee>
  	</div>
  
   <div style="width:75px" class="col-sm-5"><iframe width="560" height="315" src="https://www.youtube.com/embed/eE-zAcJusWU" frameborder="0" allowfullscreen></iframe>
