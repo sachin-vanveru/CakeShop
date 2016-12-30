@@ -22,11 +22,11 @@
     <ul  class="nav navbar-nav">
       <li  class="active"><a style="color: white" href="/SachinCakeShop">Home </a></li>
       <li><a style="color: white; font-family: serif; font-size: large; " href="/SachinCakeShop/contact_us"> Contact Us</a></li>
-      <li class="dropdown"><a style="color: white" class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+      <li class="dropdown"><a style="color: white;" class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="view_All?id=1">Birthday</a></li>
-          <li><a href="view_All?id=2">Anniversary</a></li>
-          <li><a href="view_All?id=3">SpecialEvent</a></li>
+          <li><a href="/SachinCakeShop/view_All?id=1">Birthday</a></li>
+          <li><a href="/SachinCakeShop/view_All?id=2">Anniversary</a></li>
+          <li><a href="/SachinCakeShop/view_All?id=3">SpecialEvent</a></li>
         </ul>
       </li>
       <li><a style="color: white; font-family: serif; font-size: large; " href="/SachinCakeShop/About_us"> About us</a></li>
