@@ -5,6 +5,7 @@ app.controller('myCtrl',function($scope,$http) {
 	.then(function(response){
 		$scope.data=response.data;
 	});
+
 	$scope.sort=function(keyname){
 		$scope.sortKey=keyname;
 		$scope.reverse=!$scope.reverse;
@@ -20,7 +21,7 @@ app.controller('myCtrl',function($scope,$http) {
 		});
 	};
 $scope.addItemToCart =function (itemId) {
-		
+
 		$http.put("addItem/"+itemId).success(function () {
 				alert("Item added to the cart! check on view cart");
 		}).error(function(){

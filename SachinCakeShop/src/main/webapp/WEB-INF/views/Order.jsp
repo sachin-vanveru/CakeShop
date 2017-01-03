@@ -16,7 +16,7 @@
 <body style="background-color: #ffdd99">
   <div class="container"ng-app="myapp" ng-controller = "myCtrl" ng-init="clearCartItems()">
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
-<h3>Your Order has been Sucessfully Placed.. You will recieve Item in 7 days</h3>
+<h3 style="font-family:cursive;color:red;">Your Order has been Sucessfully Placed.. You will recieve Item in 2 days</h3>
 
  <a href="<c:url value='/'/>" class="btn btn-primary center">Continue Shopping</a>
   <%@include file="/WEB-INF/views/Template/Footer.jsp" %>

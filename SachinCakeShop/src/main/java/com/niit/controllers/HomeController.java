@@ -42,7 +42,7 @@ public class HomeController {
 		return "View_All";
 	}
 	
-	 @RequestMapping (value="/product")
+	 @RequestMapping (value={"/product", "/admin/product"})
 		
 		public @ResponseBody List<Product> getAllData()
 		{

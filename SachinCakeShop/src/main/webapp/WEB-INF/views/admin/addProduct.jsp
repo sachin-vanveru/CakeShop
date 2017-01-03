@@ -24,6 +24,11 @@
 <div class="container" >
 <%@ include file="/WEB-INF/views/Template/Header.jsp" %>
 <div style="width: 50%; class="container">
+ <span style="color:green;font-size:20px;">
+ ${msg}
+ <br/>
+ </span>
+
 <form:form role="form"  action="add" modelAttribute="product" enctype="multipart/form-data"> 
  	<div class="form-group">
  				<form:label  path="name">

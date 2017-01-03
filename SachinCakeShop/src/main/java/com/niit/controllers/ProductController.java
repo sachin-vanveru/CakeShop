@@ -43,7 +43,7 @@ public class ProductController {
 			p.setImage(p.getFile().getOriginalFilename());
 			service.storeFile(p, request);
 			service.addProduct(p);
-			return new ModelAndView("View_All","msg","Product Added Sucessfully");
+			return new ModelAndView("admin/addProduct","msg","Product Added Sucessfully");
 		}
 	}
 	
@@ -86,6 +86,10 @@ public class ProductController {
 			return new ModelAndView("View_All","msg","Product Updated Sucessfully");
 		}
 
+	}
+	@RequestMapping(value="/admin/errPage")
+	public String errorPage(){
+		return "/admin/errPage";
 	}
 
 	

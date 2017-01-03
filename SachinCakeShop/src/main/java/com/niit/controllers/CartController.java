@@ -65,8 +65,9 @@ public class CartController {
         for (int i=0; i<cartItems.size(); i++) {
             if(item.getPid()==cartItems.get(i).getProduct().getPid()){
                 Item cartItem = cartItems.get(i);
+                cartItemService.removeCartItem(cartItem);
                 cartItem.setQunitity(cartItem.getQunitity()+1);
-                cartItem.setTotalPrice(item.getPrice()*cartItem.getQunitity());
+                cartItem.setTotalPrice(item.getPrice()*cartItem.getQunitity());                
                 cartItemService.addCartItem(cartItem);
 
                 return;

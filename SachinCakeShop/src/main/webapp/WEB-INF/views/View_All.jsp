@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false" %>
+    
 <!DOCTYPE html PUBLIC1 "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,7 +28,7 @@
  <input type="text" id="query" ng-model="query" />
  <button class="default"><span class="glyphicon glyphicon-search"> </span></button>
  </div>
- <span>
+  <span style="color:green;font-size:20px;">
  ${msg}
  <br/>
  </span>
@@ -62,10 +63,29 @@
     alt="no images" width="100" height="100" /></td>
    <td> {{product.name}} </td>
    <td>Rs.{{product.price}}</td>
+   
   <td> <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a></td>
+  
+  <td>
+  <c:set var="productid" value="{{product.pid}}" />
+  	<security:authorize access="hasRole('ROLE_USER')" >
+              
+              <a  ng-click="addItemToCart(product.pid)" > <button class="btn btn_primary">
+                  <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+               </button>
+               </a>       
+              
+          </security:authorize>
+            <security:authorize access="isAnonymous()">
+            <a href="login"><button class="btn btn_primary">
+            <span class="glyphicon glyphicon-shopping-cart"></span>add to cart 
+            </button>
+            </a>
+            </security:authorize>
+  </td>
   <security:authorize access="hasRole('ROLE_ADMIN')">
-   <td> <a href="admin/edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
-   <td> <a href="admin/delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
+   <td> <a href="/SachinCakeShop/admin/edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
+   <td> <a href="/SachinCakeShop/admin/delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
    </security:authorize>
    
    </tr>

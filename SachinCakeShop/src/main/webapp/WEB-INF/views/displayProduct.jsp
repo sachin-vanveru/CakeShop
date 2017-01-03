@@ -29,6 +29,10 @@
 				<li><h4 style="font-family:cursive;color:red;"> product quantity:</h4>  ${product.qty}</li>
 				<li><h4 style="font-family:cursive;color:red;"> Product Category:</h4> ${product.category}</li>
 				<li><h4 style="font-family:cursive;color:red;"> Product Price:</h4> ${product.price}</li>
+				<li style="font-family:cursive;color:red;"> 
+           	<h5>Note: Cake will be delivered in 2 working days.<br>for special Order or Special Requirement please contact Us </h5>
+           	<h5>call us:022 2554515</h5>
+           </li>
 			</ul>
 			</td>         
          <td  ng-controller="myCtrl"  ><security:authorize access="isAuthenticated()" >
@@ -45,6 +49,7 @@
             </a>
             </security:authorize>
            </td>
+           
     </tr>
 </table>
 <%@include file="/WEB-INF/views/Template/Footer.jsp" %>
