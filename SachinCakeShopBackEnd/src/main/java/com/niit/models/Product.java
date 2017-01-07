@@ -34,7 +34,7 @@ import org.springframework.web.multipart.MultipartFile;
 	@Min(value=1)
 	@Column(name="PRICE")
 	private double price;
-	@Min(value=1)
+	@Min(value=0)
 	@Column(name="Quantity")
 	private int qty;	
 	@Column(name="Category")
@@ -44,7 +44,6 @@ import org.springframework.web.multipart.MultipartFile;
 	@NotBlank	
 	@Column(name="Description")
 	private String desc;
-	@NotNull
 	@Transient
 	private MultipartFile file;  	
 

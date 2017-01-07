@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false" %>
     
@@ -21,14 +22,19 @@
 <body ng-app="myapp" style="background-color: #ffdd99;">
 <div class="container" >
 <%@include file="/WEB-INF/views/Template/Header.jsp" %>
+<marquee>
+ <label style=" color: activecaption;">Support: +91 9831319069, 10 AM - 08 PM IST ||    Send Cakes and Gifts Same Day and at Midnight India-wide ||    All Indian Major Debit/Credit Cards , Net Banking Available, 3000 + Express Delivery Gifts India     We Accept: International Credit/Debit Cards , JCB / American Express Cards, Dinners Citi Cards,     Same Day Delivery Accepted till 5 PM IST, 365 Days Delivery ||
+ </label>
+ </marquee>
+ 
 
 <Div class="container">
 <div ng-controller="myCtrl"  class="container">
-<div>
+<div align="justify">
  <input type="text" id="query" ng-model="query" />
  <button class="default"><span class="glyphicon glyphicon-search"> </span></button>
  </div>
-  <span style="color:green;font-size:20px;">
+   <span style="color:green;font-size:20px;">
  ${msg}
  <br/>
  </span>
@@ -67,15 +73,27 @@
   <td> <a href="disp?id={{product.pid}}" class="btn btn-primary">View</a></td>
   
   <td>
+  
+  
   <c:set var="productid" value="{{product.pid}}" />
+ 
   	<security:authorize access="hasRole('ROLE_USER')" >
-              
-              <a  ng-click="addItemToCart(product.pid)" > <button class="btn btn_primary">
+            <span ng-if="product.qty==0 ">
+          	<a  href="err"> <button class="btn btn_primary">
                   <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
                </button>
-               </a>       
-              
+               </a>
+               </span>  
+            <span ng-if="product.qty!=0 ">
+               <a ng-click="addItemToCart(product.pid)" > <button class="btn btn_primary">
+                  <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+               </button>
+               </a>     
+          </span>
+          
           </security:authorize>
+          
+          
             <security:authorize access="isAnonymous()">
             <a href="login"><button class="btn btn_primary">
             <span class="glyphicon glyphicon-shopping-cart"></span>add to cart 

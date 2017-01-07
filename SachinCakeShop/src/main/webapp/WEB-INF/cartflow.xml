@@ -6,8 +6,10 @@
    <var name="pay" class="com.niit.models.CardDetails" />  
   <var name="saveShip" class="com.niit.services.ShippingServices" />
    <var name="saveCardData" class="com.niit.services.CardDetailService" /> 
+
 <view-state id="memberShip" view="cartPage">
 <transition on="checkout" to="shippingPage" ></transition>
+
 </view-state>
  <view-state id="shippingPage" view="shipping" model="ship">
 <transition on="payment" to="saveShipDetails"></transition>
@@ -19,13 +21,13 @@
 </action-state>
 
 <view-state id="paymentPage" view="Payment" model="pay">
-<transition on="paynow" to="saveCard" ></transition>
+<transition on="paynow" to="saveCard"></transition>
 </view-state>
 
 <action-state id="saveCard">
 <evaluate expression="saveCardData.addCardDetail(pay,flowRequestContext)"></evaluate>
 <transition on="success" to="order"></transition>
-<transition on="error" to="paymentPage"></transition>
+<transition on="qtyerror" to="err"></transition>
 </action-state>	
 
 
@@ -34,5 +36,6 @@
 
 <end-state id="index" view="index" ></end-state>
 <end-state id="order" view="Order"></end-state>
+<end-state id="err" view="ErrorPage"></end-state>
 	
  </flow>

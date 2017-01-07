@@ -36,12 +36,20 @@
 			</ul>
 			</td>         
          <td  ng-controller="myCtrl"  ><security:authorize access="isAuthenticated()" >
-              
+              <c:choose>
+              <c:when test="${product.qty gt 0 }">
               <a  ng-click="addItemToCart('${product.pid}')" ><button class="btn btn_primary">
                   <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
                </button>
                </a>       
-              
+               </c:when>
+               <c:otherwise>
+               	<a  href="err" ><button class="btn btn_primary">
+                  <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+               </button>
+               </a>
+               </c:otherwise>
+              </c:choose>
           </security:authorize>
             <security:authorize access="isAnonymous()">
             <a href="login" class="btn btn_primary">

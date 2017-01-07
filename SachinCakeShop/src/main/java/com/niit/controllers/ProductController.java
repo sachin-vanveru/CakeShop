@@ -87,9 +87,9 @@ public class ProductController {
 		}
 
 	}
-	@RequestMapping(value="/admin/errPage")
+	@RequestMapping(value="/err")
 	public String errorPage(){
-		return "/admin/errPage";
+		return "ErrorPage";
 	}
 
 	

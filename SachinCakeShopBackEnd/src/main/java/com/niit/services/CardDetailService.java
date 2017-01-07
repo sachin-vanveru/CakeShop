@@ -12,6 +12,7 @@ import org.springframework.webflow.execution.RequestContext;
 
 import com.niit.dao.CardDetailDAO;
 import com.niit.models.CardDetails;
+import com.niit.myException.QtyNotAvaiable;
 
 @Service
 public class CardDetailService implements Serializable {
@@ -19,13 +20,20 @@ public class CardDetailService implements Serializable {
     private CardDetailDAO cardDetailDao;
 
     public String addCardDetail (CardDetails cardDetail,RequestContext context) {
+    	try{
     	
     	HttpServletRequest request = (HttpServletRequest )context.getExternalContext().getNativeRequest();  
     	
     	cardDetailDao.addCardDetail(cardDetail, request.getUserPrincipal());
     	
     	
-    	return "success";
+    	return "success";}
+    	catch (Exception m)  {
+    		m.printStackTrace();
+			return "qtyerror";
+		}
+    	
+    	
     }
 
 

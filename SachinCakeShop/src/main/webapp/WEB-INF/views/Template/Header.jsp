@@ -47,7 +47,7 @@
 				<li><a style="color: white; font-family: serif; font-size: large; "  href="login"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</security:authorize>
 			<security:authorize access="isAuthenticated()">
-				<li><span class="glyphicon"></span>Welcome <%= request.getUserPrincipal().getName() %>
+				<li><span class="glyphicon"></span><h5 style="color:orange;">Welcome <%= request.getUserPrincipal().getName() %></h5> 
 				</li>
 				<security:authorize access="hasRole('ROLE_USER')">
 				<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/memberShip'/>"><span

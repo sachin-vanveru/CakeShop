@@ -62,11 +62,11 @@
       </div>
     
       <div class="item">
-        <img style="height: 400px;" src="<c:url value='/resources/image/ann2.jpg' />" alt="anniversary" />
+        <img style="height: 400px;" src="<c:url value='/resources/image/cake4.jpg' />" alt="Special Event" />
       </div>
 
       <div class="item">
-       <img style="height: 400px;" src="<c:url value='/resources/image/ann3.jpg' />" alt="anniversary" />
+       <img style="height: 400px;" src="<c:url value='/resources/image/cake6.jpg' />" alt="anniversary" />
       </div>
     </div>
 
@@ -115,7 +115,7 @@
        </div>
        <div class="col-sm-4">
          <a href="view_All?id=2">
-           <img  height="300px" width="300px" alt="Anniversary Cake" src="<c:url value='/resources/image/ann5.jpg'/>" />
+           <img  height="300px" width="300px" alt="Anniversary Cake" src="<c:url value='/resources/image/ann1.jpg'/>" />
          </a>
          <br>
          <h3 style="font-family:cursive;color:red;">Anniversary Cake</h3>
