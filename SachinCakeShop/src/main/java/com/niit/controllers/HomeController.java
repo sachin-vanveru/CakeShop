@@ -19,7 +19,7 @@ import com.niit.services.ProductServices;
 public class HomeController {
 	@Autowired
 	 ProductServices productservices;
-	@RequestMapping(value="/")
+	@RequestMapping(value={"/","/SachinCakeShop/"})
 	public String home()
 	{
 		return "index";

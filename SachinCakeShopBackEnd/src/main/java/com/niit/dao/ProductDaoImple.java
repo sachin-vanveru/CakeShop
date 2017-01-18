@@ -62,8 +62,6 @@ public class ProductDaoImple implements ProductDao {
 		try{
 		byte[] bytes =file.getBytes();
 		System.out.println(file.getOriginalFilename());
-		
-		
 		File serverFile = new File(path);
 		serverFile.createNewFile();
 	
